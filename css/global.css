@@ -1,0 +1,56 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*全局样式*/
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body{ font-family:"Tahoma";/*font-size:0.875em;*/ font-size:12px; color:#333; box-sizing:border-box; -moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;/* line-height:18px; zmm*/line-height:24px;}
+*, *:before, *:after {
+    box-sizing: border-box;
+	-moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+ol,ul,li{list-style:none;}
+em,i{font-style:normal;}
+a{/*text-decoration:none; color:#006bab; zmm*/ text-decoration:none; color:#0A74B9; outline:none;font-family:Arial, Helvetica, sans-serif;}
+a:visited{text-decoration:none; color:#006bab;}
+a:hover{ text-decoration:underline;}
+img,a img { border:none;}
+h1,h2,h3,h4,h5,h6{ /*font-size:100%; font-variant: normal; zmm*/font-family:Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:13px; font-weight:normal;}
+.clear{ clear:both;}
+.clearfix{zoom:1;}
+.clearfix:after{clear:both; content:"";display:block;height:0;line-height:0;visibility:hidden;}
+/*公共样式*/
+.width_1024{ width:1024px; margin:0 auto;  box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+.min{ min-width:1024px; margin:0 auto;}
+.max{ max-width:1024px; margin:0 auto;}
+.f_l{ float:left;}
+.f_r{ float:right;}
+.middle{ margin:0px auto;}
+h1{ font-size:34px;}
+h2{ font-size:24px; line-height:40px;}
+/*h2 span{ color:#e97211;} zmm*/
+h3{ font-size:22px;}
+h4{ font-size:18px;}
+h5{ font-size:16px;}
+h6{ font-size:12px;}
+
+a.witer{ color:#fff; display:block;}
+a.witer:hover{ color:#fff; text-decoration:none;}
+
+.erRight table{ border:1px solid #d7d7d7; border-top:none; border-left: none; background:#f6f6f6;}
+.erRight table td{ border:1px solid #d7d7d7; border-bottom:none; border-right:none; padding:20px;}
+
+.introduce{ padding-bottom:20px;}
+.introduce h2{ font-size:18px; font-weight:bold; margin-bottom:5px;}
+
+.highlight {
+    background-color:#ff2f0d;
+    -moz-border-radius:5px; /* FF1+ */
+    -webkit-border-radius:5px; /* Saf3-4 */
+    border-radius:5px; /* Opera 10.5, IE 9, Saf5, Chrome */
+    -moz-box-shadow:0 1px 4px rgba(147, 33, 9, 0.7); /* FF3.5+ */
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */
+    color: #FFF;
+}
+.highlight {padding:1px 4px;margin:0 -4px;}

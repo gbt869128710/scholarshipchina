@@ -1,0 +1,2253 @@
+﻿<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-US" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--    <link href="css/style-2d.css" rel="stylesheet" type="text/css" />-->
+    <link href="css/component.css" rel="stylesheet" type="text/css" />
+
+    <link type="text/css" media="all" href="css/autoptimize_2d76a0062e21dffab10cf3a1b24c03ba.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="picture/logos.png">
+    <title>Universities Detail - ScholarshipChina</title>
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <style>
+        .site-header,
+        .site-header.header_v2 .width-navigation {
+            background-color: transparent;
+        }
+        
+        .navigation .width-navigation .navbar-nav>li>a,
+        .thim-login form#loginform input[type=submit],
+        .learn-press .thim-enroll-course-button,
+        .fa-chevron-up:hover,
+        .thim-course-grid .course-item .course-thumbnail>a.course-readmore {
+            color: #fff
+        }
+        
+        .thim-course-grid .course-item .course-thumbnail>a.course-readmore:hover {
+            color: #fff;
+            background: #fa394a;
+        }
+        
+        .comment_form {
+            float: left;
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .comment_form h5 {
+            font-size: 16px;
+            line-height: 23px;
+            margin-bottom: 12px;
+            font-style: normal;
+        }
+        
+        .comment_input_bg {
+            float: left;
+            width: 75%;
+            height: 40px;
+            padding: 7px 10px 0px 10px;
+            border-top: 2px solid #e3e3e3;
+            border-left: 2px solid #e3e3e3;
+            border-right: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e3e3e3;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .comment_form label {
+            float: left;
+            width: 90px;
+            height: 15px;
+            padding: 7px 10px;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+        
+        .comment_textarea_bg {
+            float: left;
+            width: 90%;
+            height: 235px;
+            padding: 7px 10px 0px 10px;
+            margin-bottom: 20px;
+            border-top: 2px solid #e3e3e3;
+            border-left: 2px solid #e3e3e3;
+            border-right: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e3e3e3;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        input[type="submit"] {
+            cursor: pointer;
+            -webkit-appearance: button;
+            color: #fff;
+        }
+        
+        input[type="submit"]:hover,
+        .learn-press .thim-enroll-course-button:hover {
+            background: #fa394a;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .comment_submit {
+            background-color: #eee;
+            border: 1px solid #ddd;
+            padding: 9px 13px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            color: #333;
+            text-transform: uppercase;
+        }
+        
+        .comment_checkbox {
+            float: left;
+            display: block;
+            width: 90%;
+            margin-top: 10px;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            line-height: normal;
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] {
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .left {
+            margin-top: 5px;
+            width: 100%;
+            position: relative;
+        }
+        
+        #main .content {
+            width: 100%;
+            float: right;
+            margin-right: 0;
+            color: #34495e;
+            min-height: 1000px;
+            margin-bottom: 0;
+        }
+        
+        ul {
+            margin-left: 0;
+        }
+        
+        .about_s.about_text .inner {
+            padding: 0 0 0 10px;
+            border: none;
+        }
+        
+        .about_s.about_text .inner:hover {
+            box-shadow: none;
+        }
+        
+        .about_s.about_text h3 {
+            background-position: 0 -1916px;
+            padding-left: 7px;
+            margin-bottom: 30px;
+            text-align: left;
+            font-size: 18px;
+        }
+        
+        .course h3 {
+            background: none;
+        }
+        
+        .video .inner p {
+            margin: 10px 0;
+            text-align: left;
+        }
+        
+        .share_exp .box dt,
+        .comment dl dt {
+            width: 88%;
+            float: right;
+        }
+        
+        .share_exp .name,
+        .comment .name {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333333;
+            text-align: left;
+        }
+        
+        .content>h2 {
+            padding-left: 0;
+            line-height: 32px;
+            font-size: 30px;
+            text-align: left;
+        }
+        
+        .share_exp dt .pass,
+        .comment dt p.pass {
+            color: #666666;
+            line-height: 26px;
+            margin: 10px 0;
+            text-align: left;
+        }
+        
+        .about_s.about_text .inner a {
+            color: #fa394a;
+            display: inline-block;
+            margin: 5px 0 0 15px;
+        }
+        
+        .course h3 {
+            background: none;
+            font-size: 18px;
+            text-align: left;
+            padding-left: 7px;
+        }
+        
+        .share_exp h3 a,
+        .video h3 a,
+        .download h3 a {
+            color: #fa394a;
+            font-size: 14px;
+            background-position: 50px -1867px;
+            padding-right: 35px;
+        }
+        
+        .course .inner a {
+            background-image: none;
+        }
+        
+        .l_tags .more>a {
+            display: block;
+            width: 67px;
+            line-height: 20px;
+            background: url(../images/l_tag.png) no-repeat 47px -120px;
+            color: #f39800;
+            margin: 20px auto 0;
+            text-align: left;
+        }
+        
+        .grid h2,
+        .grid p {
+            margin: 0;
+        }
+        
+        .grid h2 {
+            word-spacing: -0.15em;
+            font-weight: 300;
+        }
+        
+        .course .inner h2 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            height: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .about_s.about_text .grid h3 {
+            color: #fff;
+        }
+        
+        .focusBox .file .clearfix dd {
+            margin: 0;
+            text-align: left;
+        }
+        
+        .focusBox .file .clearfix dd h5 {
+            margin: 0;
+            text-align: left;
+            font-weight: lighter;
+        }
+        
+        .l_tags .tags li {
+            text-align: left;
+        }
+        
+        .l_mid div p {
+            background-position: 0 -12px;
+            padding-left: 30px;
+            padding-top: 0px;
+            height: 21px;
+            float: right;
+        }
+        
+        .l_mid h1,
+        .l_mid>p {
+            text-align: left;
+        }
+        
+        .l_top {
+            overflow: hidden;
+        }
+        
+        .l_top .l_t_left {
+            float: right;
+            width: calc(100% - 125px);
+            text-align: left;
+        }
+        
+        .l_top .l_t_left p {
+            margin: 0;
+        }
+        
+        .video {
+            margin-bottom: 0;
+        }
+        
+        .breadcrumbs-wrapper #breadcrumbs {
+            text-align: left;
+        }
+        
+        .vs_s .img-responsive {
+            display: inline-block;
+        }
+        
+        .odd_pic .shade p {
+            color: #1bbc9b;
+            line-height: 18px;
+        }
+        
+        .shade>div {
+            width: 100%;
+        }
+        
+        .comment.clear {
+            margin-bottom: 0;
+        }
+        
+        .alignleft {
+            padding-bottom: 0;
+        }
+        
+        .share_exp #box2 dl:hover,
+        .share_exp .box dl:hover {
+            border-top: 1px solid #ececec;
+            background: #f5f5f5;
+            border-left: 5px solid #fa394a;
+            cursor: pointer;
+        }
+        
+        .l_tags .tags li a {
+            color: #666;
+        }
+        
+        .l_mid {
+            background: #253d5f;
+            box-shadow: 0 0 3px #253d5f inset;
+            padding: 15px;
+            color: #FFFFFF;
+            position: relative;
+        }
+        
+        .share_exp h3 .btn1,
+        .btn1,
+        .btn1:hover {
+            display: inline-block;
+            background: #fa394a;
+            color: #ffffff;
+            padding: 0 20px;
+            border-radius: 5px;
+            line-height: 35px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .vs .result,
+        .grid .effect-romeo,
+        .grid .effect-milo,
+        .grid .effect-chico {
+            background: #fa394a;
+        }
+        
+        .thim-course-search-overlay .search-toggle {
+            color: #fff;
+        }
+        
+        .left .bian {
+            height: 5px;
+            background: url(../images/l_top_bg_03.png) repeat-x;
+            position: relative;
+            left: 0;
+        }
+        
+        .left .l_top {
+            padding: 20px 15px;
+            background: #ecf0f1;
+            position: relative;
+        }
+        
+        .l_top .s_logo {
+            width: 112px;
+            height: 112px;
+            border-radius: 100%;
+            background: #fcfcfc;
+            text-align: center;
+            z-index: 999;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .l_top .s_logo a {
+            display: block;
+            width: 112px;
+            height: 112px;
+        }
+        
+        .l_top .s_logo a img {
+            margin-top: 12px;
+        }
+        
+        .l_mid h1 a {
+            color: #fff;
+        }
+        
+        .fl {
+            float: left;
+        }
+        
+        .l_mid div span {
+            display: inline-block;
+            font-size: 14px;
+            color: #fff000;
+            margin-top: 2px;
+        }
+        
+        .l_mid .arr_2,
+        .l_mid div p,
+        .l_tags .more #pop_menu .arrow,
+        .l_tags .more #pop_menu li a,
+        a.search-black,
+        a.search-black:hover,
+        #content .left p,
+        .download dl dt a,
+        .download dl dt a:hover,
+        .vs .vs_icon,
+        .com_box2 .sanjiao,
+        .zhai i.i_1,
+        .zhai i.i_2,
+        .zhai i.i_3,
+        .zhai i.i_4,
+        .zhai i.i_8,
+        .zhai table td .more,
+        .share_form #myform .ui.button i,
+        .course1 .feature h3,
+        .feature .box .rate b,
+        .feature .box .save a em,
+        .feature .box .save a em.active,
+        .c_detail .course1>h3,
+        .acco .open_new,
+        #login_form .login_container .field .input i {
+            background-image: url(../images/sprite2.png);
+            background-repeat: no-repeat;
+        }
+        
+        .l_tags {
+            background: #ecf0f1;
+            padding: 20px;
+        }
+        
+        .l_tags .tags li {
+            border-bottom: 1px solid #e0e1e1;
+            border-right: 1px solid #e0e1e1;
+            padding-left: 14px;
+            line-height: 34px;
+            width: 50%;
+            float: left;
+            list-style: none;
+        }
+        
+        .l_tags .tags li em {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            background: url(../images/l_tag.png) no-repeat 0 0;
+            float: left;
+            margin-top: 10px;
+        }
+        
+        .l_mid div p a {
+            color: #fff000;
+        }
+        
+        .l_tags .tags li.no_border {
+            border-bottom: none;
+        }
+        
+        .l_tags .tags li:nth-child(2n) {
+            border-right: none;
+        }
+        
+        .l_tags .tags li .t_2 {
+            background-position: 0 -19px;
+        }
+        
+        .l_tags .tags li .t_3 {
+            background-position: 0 -39px;
+        }
+        
+        .l_tags .tags li .t_4 {
+            background-position: 0 -59px;
+        }
+        
+        .l_tags .tags li .t_5 {
+            background-position: 0 -79px;
+        }
+        
+        .l_tags .tags li .t_6 {
+            background-position: 0 -99px;
+        }
+        
+        .l_tags .more {
+            position: relative;
+        }
+        
+        .l_tags .more>a {
+            display: block;
+            width: 77px;
+            line-height: 20px;
+            background: url(../images/l_tag.png) no-repeat 50px -120px;
+            color: #fa394a;
+            margin: 20px auto 0;
+            transition: all 0s;
+        }
+        
+        .l_tags .more #pop_menu {
+            width: 198px;
+            padding: 0 18px;
+            background: #FFFFFF;
+            position: absolute;
+            bottom: 28px;
+            left: 50%;
+            margin-left: -99px;
+            display: none;
+        }
+        
+        .l_tags .more #pop_menu li {
+            list-style: none;
+        }
+        
+        .l_tags .more #pop_menu li a {
+            display: block;
+            border-bottom: 1px solid #ececec;
+            line-height: 40px;
+            background-position: 0 -45px;
+            color: #333333;
+            padding-left: 19px;
+        }
+        
+        #main .content h2 i,
+        .about_s h3 i,
+        .share_exp h3 i,
+        .video h3 i,
+        .download h3 i,
+        .comment .fresh i,
+        .comment h4 i {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-position: 0 -1338px;
+            margin: 0 10px 0 0;
+            background-image: url(../images/icons.png);
+            background-repeat: no-repeat;
+            float: left;
+        }
+        
+        .content h2,
+        .about_s h3,
+        .share_exp h3,
+        .video h3,
+        .download h3 {
+            margin-bottom: 20px;
+        }
+        
+        .odd_pic,
+        .about_s,
+        .video,
+        .download,
+        .vs,
+        .comment,
+        .share_exp {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .odd_pic div {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding: 0 5px;
+            width: 33%;
+            float: left;
+            transition: all .3s;
+        }
+        
+        .odd_pic img,
+        .reason img,
+        .video .inner a img {
+            width: 100%;
+        }
+        
+        .odd_pic .shade {
+            width: 80%;
+            height: 80%;
+            text-align: center;
+            padding: 10% 5% 0;
+            background: #ffffff;
+            position: absolute;
+            left: 10%;
+            top: 100%;
+        }
+        
+        .odd_pic div:hover .shade {
+            top: 10%;
+        }
+        
+        .odd_pic .shade div {
+            width: 100%;
+        }
+        
+        .odd_pic .shade a {
+            display: block;
+            background: #fa394a;
+            border-radius: 5px;
+            line-height: 32px;
+            color: #ffffff;
+            margin-top: 5%;
+        }
+        
+        .about_s h3 i {
+            background-position: 0 -1368px;
+        }
+        
+        .fr,
+        .f_r {
+            float: right;
+        }
+        
+        .share_exp h3 a,
+        .video h3 a,
+        .video .inner a em {
+            background-image: url(../images/icons.png);
+            background-repeat: no-repeat;
+        }
+        
+        .share_exp h3 a,
+        .video h3 a,
+        .download h3 a {
+            color: #fa394a;
+            font-size: 14px;
+            background-position: 50px -1866px;
+            padding-right: 35px;
+        }
+        
+        .share_exp #box2 {
+            padding-left: 5px;
+        }
+        
+        .share_exp .box dl,
+        .share_exp #box2 dl {
+            padding: 30px 0 20px 15px;
+            border-bottom: 1px solid #ececec;
+            border-left: 5px solid #fff;
+            border-top: 1px solid #f8f8f8;
+            overflow: hidden;
+            margin: 0;
+        }
+        
+        .share_exp .box dd,
+        .comment dl dd {
+            margin-top: 5px;
+            width: 7%;
+            margin: 5px 10px 0 0;
+        }
+        
+        share_exp .name,
+        .comment .name {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333333;
+        }
+        
+        .share_exp dt .pass,
+        .comment dt p.pass {
+            color: #666666;
+            line-height: 26px;
+            margin: 10px 0;
+        }
+        
+        .share_exp dt ul {
+            overflow: hidden;
+        }
+        
+        .share_exp dt .info li:first-child {
+            border-left: none;
+            padding-left: 0;
+        }
+        
+        .share_exp dt .info li {
+            border-right: 1px solid #cfcfcf;
+            border-left: 1px solid #a7a7a7;
+            float: left;
+            padding: 0 23px;
+            margin: 0;
+            color: #999999;
+            list-style: none;
+        }
+        
+        .share_exp dt .info li:last-child {
+            border-right: none;
+        }
+        
+        .share_exp .name a,
+        .share_exp .name a:hover {
+            color: #333333;
+        }
+        
+        dt,
+        kbd kbd,
+        label {
+            font-weight: normal;
+        }
+        
+        .video h3 i {
+            background-position: 0 -1392px;
+        }
+        
+        .video>div {
+            padding: 0 5px;
+            margin-bottom: 2%;
+            width: 32%;
+            float: left;
+        }
+        
+        .video .inner {
+            padding: 20px;
+            background: #f8f8f8;
+            color: #2d4b65;
+            border-radius: 3px;
+        }
+        
+        .video .inner h5 {
+            border-bottom: 1px solid #e0e3e6;
+            margin-bottom: 15px;
+            font-size: 18px;
+            padding-bottom: 15px;
+            height: auto;
+            min-height: 60px;
+        }
+        
+        .video .inner a {
+            display: block;
+            position: relative;
+        }
+        
+        .video .inner a em {
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-position: 0 -199px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        
+        .video .inner:hover {
+            box-shadow: 2px 2px 5px #ccc, -2px -2px 5px #ccc;
+            cursor: pointer;
+            transition: 0.5s ease-in;
+        }
+        
+        section {
+            padding: 0em;
+            text-align: center;
+        }
+        
+        .focusBox {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding-top: 30px;
+        }
+        
+        .focusBox .file {
+            position: relative;
+            z-index: 0;
+        }
+        
+        .download ul {
+            background: #f8f8f8;
+            margin-top: 30px;
+        }
+        
+        .download dl {
+            border-bottom: 1px dotted #ebecee;
+            font-size: 14px;
+            margin-bottom: 0;
+            padding: 15px 0;
+            color: #34495e;
+            font-weight: bold;
+        }
+        
+        .download dl dd {
+            width: 82%;
+            float: left;
+            padding-left: 3%;
+        }
+        
+        .download dl dt {
+            font-weight: normal;
+            width: 15%;
+            float: right;
+            text-align: right;
+            padding-right: 20px;
+        }
+        
+        .download dl dt a {
+            display: block;
+            width: 26px;
+            height: 24px;
+            background-position: 0 -151px;
+            margin-right: 20px;
+        }
+        
+        .focusBox li {
+            list-style: none;
+        }
+        
+        .vs {
+            background-image: url(../images/vs_bg_03.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 270px 0 122px 0;
+            background-size: cover\9;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/vs_bg_03.jpg', sizingMethod='scale');
+        }
+        
+        .vs .box {
+            width: 46%;
+            float: left;
+            padding-left: 8%;
+            position: relative;
+        }
+        
+        .vs .vs_s {
+            text-align: center;
+            background: #FFFFFF;
+            border: 1px solid #f2deb9;
+            float: left;
+            padding: 2%;
+            position: relative;
+            margin-bottom: 30px;
+            width: 48%;
+        }
+        
+        .vs .vs_icon {
+            width: 42px;
+            height: 23px;
+            background-position: 0 -180px;
+            position: absolute;
+            top: 30%;
+            left: 58%;
+            margin: 0 0 0 -21px;
+        }
+        
+        .vs .result {
+            display: block;
+            background: #fa394a;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 1em;
+            margin: 0 auto;
+            width: 40%;
+            clear: both;
+        }
+        
+        .comment {
+            background: #FFFFFF;
+        }
+        
+        .comment h4 {
+            background: #fa394a url(../images/comm_bg.jpg) no-repeat right center;
+            line-height: 34px;
+            color: #ffffff;
+            width: 85%;
+            padding-left: 10px;
+            margin: 0;
+        }
+        
+        .comment h4 i {
+            width: 24px;
+            height: 34px;
+            background-position: 0 -1490px;
+            margin-right: 6px;
+        }
+        
+        .comment .fresh {
+            line-height: 34px;
+            color: #fa394a;
+            background-color: #fff;
+            text-align: center;
+            width: 15%;
+            padding: 0 10px;
+        }
+        
+        .comment .fresh i {
+            background-position: 0 -1532px;
+            width: 17px;
+            height: 17px;
+            margin-top: 10px;
+        }
+        
+        .com_box {
+            background: #f3f3f3;
+            padding: 20px;
+        }
+        
+        .com_box span em {
+            color: #fa394a;
+        }
+        
+        .com_box textarea {
+            width: 100%;
+            border: 1px solid #dedddd;
+            border-radius: 5px;
+            min-height: 80px;
+            margin: 15px 0 15px 0;
+            padding: 10px;
+            color: #adb3b9;
+            font-family: tahoma;
+        }
+        
+        .comment .score>div {
+            margin-bottom: 15px;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .comment .score>div span {
+            margin-right: 10px;
+        }
+        
+        .com_box input {
+            font-size: 14px;
+            border: none;
+        }
+        
+        .comment .box {
+            padding: 0 25px;
+        }
+        
+        .ui.dimmer {
+            display: none;
+            position: absolute;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            vertical-align: middle;
+            background: rgba(0, 0, 0, .85);
+            opacity: 0;
+            line-height: 1;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-transition: background-color .5s linear;
+            transition: background-color .5s linear;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            will-change: opacity;
+            z-index: 1000;
+        }
+        
+        .ui.inverted.dimmer {
+            background: rgba(255, 255, 255, .85);
+        }
+        
+        .ui.loader {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: 0;
+            z-index: 1000;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: auto !important;
+            height: auto !important;
+            text-align: center;
+            font-style: normal;
+            min-width: 2.2585em;
+            padding-top: 2.9585em;
+            color: rgba(0, 0, 0, .8);
+            font-size: 1em;
+        }
+        
+        @media (max-width:767px) {
+            .l_tags .tags li {
+                border-bottom: 1px solid #e0e1e1;
+                border-right: none;
+                padding-left: 14px;
+                line-height: 34px;
+                width: 100%;
+                float: left;
+                list-style: none;
+            }
+            .l_tags .tags li em {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                background: url(../images/l_tag.png) no-repeat 0 0;
+                float: left;
+                margin-top: 10px;
+            }
+            .l_tags .tags li.no_border {
+                border-bottom: none;
+            }
+            .l_tags .tags li.no_border:nth-child(5) {
+                border-bottom: 1px solid #e0e1e1;
+            }
+            .odd_pic div {
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 10px;
+                padding: 0 5px;
+                width: 100%;
+                float: left;
+                transition: all .3s;
+            }
+            .share_exp #box2 {
+                padding-left: 5px;
+                margin-top: 28px;
+            }
+            .share_exp .box dd,
+            .comment dl dd {
+                margin-top: 5px;
+                width: 20%;
+                margin: 5px 10px 0 0;
+            }
+            .share_exp .box dl,
+            .share_exp #box2 dl {
+                padding: 30px 0 20px 0;
+                border-bottom: 1px solid #ececec;
+                border-left: 5px solid #fff;
+                border-top: 1px solid #f8f8f8;
+                overflow: hidden;
+                margin: 0;
+            }
+            .share_exp .box dt,
+            .comment dl dt {
+                width: 75%;
+                float: right;
+            }
+            .share_exp dt .info li {
+                width: 100%;
+                border-right: none;
+                border-left: none;
+                border-bottom: 1px solid #a7a7a7;
+                float: left;
+                padding: 5px 0;
+                margin: 0;
+                color: #999999;
+                list-style: none;
+                text-align: left;
+            }
+            .video>div {
+                padding: 0 5px;
+                margin-bottom: 2%;
+                width: 100%;
+                float: left;
+            }
+            .download .focusBox .clearfix li dl:nth-child(1) dd {
+                width: 60%;
+            }
+            .download .focusBox .clearfix li dl:nth-child(1) dt {
+                width: 40%;
+            }
+            .vs .box {
+                width: 100%;
+                float: left;
+                padding-left: 0;
+                position: relative;
+                margin-bottom: 30px;
+            }
+            .comment h4 {
+                background: #fa394a url(../images/comm_bg.jpg) no-repeat right center;
+                line-height: 34px;
+                color: #ffffff;
+                width: 60%;
+                padding-left: 10px;
+                margin: 0;
+            }
+            .comment .fresh {
+                line-height: 34px;
+                color: #fa394a;
+                background-color: #fff;
+                text-align: center;
+                width: 40%;
+                padding: 0 10px;
+            }
+            .effect-milo img {
+                transform: translate3d(-8px, 0, 0) scale(1.12);
+            }
+            .grid .grid_right>div {
+                margin-bottom: 8px
+            }
+        }
+        
+        .site-header .navbar-nav>li {
+            width: 19%;
+            text-align: left;
+            padding: 25px;
+            border-right: 1px solid #f5f5f5;
+        }
+        
+        .site-header .navbar-nav>li:last-of-type {
+            border-right: none;
+        }
+        
+        .site-header.bg-custom-sticky.affix-top .navbar-nav>li {
+            display: none;
+            font-size: 11px;
+            color: #999;
+            line-height: 1.2;
+        }
+        
+        .site-header.bg-custom-sticky.affix .navbar-nav>li>a {
+            padding: 0;
+            font-weight: 500;
+        }
+        
+        .site-header.bg-custom-sticky.affix .navbar-nav>li>.desc {
+            font-size: 11px;
+            color: #999;
+            line-height: 1.2;
+        }
+        
+        #masthead .navigation {
+            padding: 0;
+        }
+        
+        .navigation .width-logo {
+            padding-top: 25px;
+            padding-bottom: 5px;
+        }
+        
+        .site-header .navbar-nav>li {
+            max-height: 108px;
+            height: 108px;
+        }
+        
+        .thim-widget-button .widget-button.small {
+            padding: 0 23px;
+        }
+        
+        #panel-w58fef074d40db-0-4-0 {
+            margin-top: 8px;
+        }
+        
+        footer#colophon .thim-footer-location img {
+            margin-bottom: 17px;
+        }
+        
+        .mobile-menu-container ul li>a {
+            color: #fff;
+        }
+        
+        .menu-mobile-effect.navbar-toggle span.icon-bar {
+            background-color: #fff;
+        }
+        
+        .widget-listingsearch {
+            float: right;
+            margin-top: 35px;
+            z-index: 3;
+            width: 272px;
+            height: 50px;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+        }
+        
+        .inner-left {
+            float: left;
+            height: 40px;
+            width: 212px;
+            background: #fff;
+            border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            overflow: hidden;
+        }
+        
+        button:hover {
+            background-color: #dd0640;
+        }
+        
+        .affix .widget-listingsearch {
+            display: none;
+        }
+        
+        #toolbar .widget_search {
+            float: left;
+        }
+        
+        #toolbar .widget_search .search-form label .search-fields {
+            border: 0;
+            line-height: 30px;
+            height: 30px;
+            padding: 0 10px;
+            font-size: 13px;
+            width: 180px;
+            position: absolute;
+            top: -5px;
+            right: 0;
+            left: 15px;
+            z-index: 999;
+            background: #444;
+        }
+        
+        #toolbar .widget_search .search-form:after {
+            left: 170px;
+            top: 0;
+            line-height: 16px;
+            height: 16px;
+            font-size: 14px;
+            width: 20px;
+            z-index: 999;
+        }
+        
+        #search-4 {
+            display: none;
+        }
+        
+        .widget-listingsearch {
+            display: block;
+        }
+        
+        @media (max-width:1024px) {
+            #search-4 {
+                display: inline-block;
+            }
+            .widget-listingsearch {
+                display: none;
+            }
+            .vs .box {
+                width: 47%;
+            }
+            .comment h4 {
+                width: 82%;
+            }
+            .comment .fresh {
+                width: 18%;
+            }
+        }
+        
+        @media (max-width:768px) {
+            #search-4 {
+                display: inline-block;
+            }
+            .widget-listingsearch {
+                display: none;
+            }
+            #toolbar .widget_search {
+                padding: 5px 0;
+            }
+            #toolbar .widget_search .search-form {
+                border: none;
+            }
+            #pgc-w58292b77794b7-0-1 .thim-widget-icon-box .wrapper-box-icon.contact_info a {
+                word-wrap: break-word;
+            }
+            .thim-have-any-question {
+                display: none;
+            }
+            #toolbar .widget_search .search-form label .search-fields {
+                left: 0;
+            }
+            #toolbar .widget_search .search-form:after {
+                left: 155px;
+            }
+        }
+        
+        @media (max-width:768px) {
+            footer#colophon .footer .widget-title {
+                width: 111px;
+                word-wrap: break-word;
+            }
+            .l_top .l_t_left {
+                width: 100%;
+            }
+            .l_tags .tags li {
+                width: 100%;
+            }
+            .l_tags {
+                padding: 20px 10px;
+            }
+            .vs .box {
+                width: 93%;
+                margin-top: 130px;
+            }
+            .vs .vs_icon {
+                left: 53%;
+            }
+            .vs .box:last-of-type {
+                margin: 20px 0;
+            }
+            .comment h4 {
+                width: 78%;
+            }
+            .comment .fresh {
+                width: 22%;
+            }
+        }
+        
+        @media (max-width:767px) {
+            footer#colophon .footer .widget-title {
+                width: auto;
+                word-wrap: break-word;
+            }
+            .vs .box {
+                width: 93%;
+                margin: 0 auto;
+                margin-top: 130px;
+                float: inherit;
+            }
+            .vs .box:last-of-type {
+                margin: 0 auto;
+                padding: 20px 0;
+            }
+            .vs .vs_icon {
+                left: 49%;
+            }
+            .comment h4 {
+                width: 65%;
+            }
+            .comment .fresh {
+                width: 35%;
+            }
+        }
+        
+        @media (max-width:414px) {
+            footer#colophon .copyright-area .text-copyright {
+                width: 325px;
+                word-wrap: break-word;
+            }
+        }
+        
+        @media (max-width:375px) {
+            footer#colophon .copyright-area .text-copyright {
+                width: 325px;
+                word-wrap: break-word;
+            }
+        }
+        
+        @media (max-width:320px) {
+            footer#colophon .copyright-area .text-copyright {
+                width: 280px;
+                word-wrap: break-word;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="bp-legacy lp_course-template-default single single-lp_course postid-5428 learnpress learnpress-page group-blog thim-body-preload bg-boxed-image no-js" id="thim-body">
+    <div id="wrapper-container" class="wrapper-container">
+        <div class="content-pusher">
+            <header id="masthead" class="site-header affix-top bg-custom-sticky sticky-header header_overlay header_v1">
+                <div id="toolbar" class="toolbar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="toolbar-container">
+                                    <aside id="text-2" class="widget widget_text">
+                                        <div class="textwidget">
+                                            <div class="thim-have-any-question"> Have any question?
+                                                <div class="mobile"><i class="fa fa-phone"></i><a href="tel:0086 025 58745604" class="value">+ 0086 025 58745604 </a></div>
+                                                <div class="email"><i class="fa fa-envelope"></i><a href="mailto:info@scholarshipchina.com">info@scholarshipchina.com</a></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                    <aside id="search-4" class="widget widget_search">
+                                        <form role="search" method="get" class="search-form" action="https://educationwp.thimpress.com/demo-kindergarten/">
+                                            <label> 
+                                                <span class="screen-reader-text">Search for:</span> 
+                                                <input type="search" class="search-fields" placeholder="Search …" value="" name="s">
+                                            </label>
+                                            <input type="submit" class="search-submit" value="Search">
+                                        </form>
+                                    </aside>
+                                    <aside id="login-popup-3" class="widget widget_login-popup">
+                                        <div class="thim-widget-login-popup thim-widget-login-popup-base">
+                                            <div class="thim-link-login thim-login-popup"> <a class="register" href="#">Register</a> <a class="login" href="#">Login</a></div>
+                                            <div id="thim-popup-login" class="has-shortcode">
+                                                <div class="thim-login-container">
+                                                    <a href='#' style='display:none;'></a>
+                                                    <a href='#' style='display:none;'></a>
+                                                    <a href='#' style='display:none;'></a>
+                                                    <a href='#' style='display:none;'></a>
+                                                    <div class='mo-openid-app-icons'>
+                                                        <p style='color:#000000'> Login with social networks</p>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-facebook btn-custom-dec login-button' onClick='moOpenIdLogin("facebook");'> <i style='padding-top:5px !important' class='fa fa-facebook'></i> Facebook</a>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-google btn-custom-dec login-button' onClick='moOpenIdLogin("google");'> <i style='padding-top:5px !important' class='fa fa-google-plus'></i> Google</a>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-twitter btn-custom-dec login-button' onClick='moOpenIdLogin("twitter");'> <i style='padding-top:5px !important' class='fa fa-twitter'></i> Twitter</a>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-linkedin btn-custom-dec login-button' onClick='moOpenIdLogin("linkedin");'> <i style='padding-top:5px !important' class='fa fa-linkedin'></i> LinkedIn</a>
+                                                    </div> <br>
+                                                    <div class="thim-login">
+                                                        <h2 class="title">Login with your site account</h2>
+                                                        <form name="loginform" id="loginform" action="#" method="post">
+                                                            <p class="login-username"> <input type="text" name="user_login" placeholder="Username or email" id="thim_login" class="input" value="" size="20" /></p>
+                                                            <p class="login-password"> <input type="password" name="user_password" placeholder="Password" id="thim_pass" class="input" value="" size="20" /></p> <a class="lost-pass-link" href="#" title="Lost Password">Lost your password?</a>
+                                                            <p class="forgetmenot login-remember"> <label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me </label></p>
+                                                            <p class="submit login-submit"> <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Login" /> <input type="hidden" name="redirect_to" value="#" /> <input type="hidden" name="testcookie" value="1" /></p>
+                                                        </form>
+                                                        <p class="link-bottom">Not a member yet? <a class="register" href="#">Register now</a></p>
+                                                    </div> <span class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></span></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="navigation col-sm-12">
+                            <div class="tm-table">
+                                <div class="width-logo table-cell sm-logo">
+                                    <a href="default.html" title="ScholarshipChina" rel="home" class="no-sticky-logo"><img src="picture/logo.png" alt="ScholarshipChina"></a>
+                                    <a href="default.html" rel="home" class="sticky-logo"><img src="picture/logo-sticky.png" alt="ScholarshipChina"></a>
+                                </div>
+                                <nav class="width-navigation table-cell table-right">
+                                    <ul class="nav navbar-nav menu-main-menu">
+                                        <li id="menu-item-4527" class=""><a href="universities.html" class="tc-menu-inner">UNIVERSITIES </a>
+                                            <div class="desc">Browse 600+ Chinese universities</div>
+                                        </li>
+                                        <li id="menu-item-4528" class=""><a href="scholarships.html" class="tc-menu-inner">SCHOLARSHIPS</a>
+                                            <div class="desc">100% success rate to get the scholarship</div>
+                                        </li>
+                                        <li id="menu-item-127" class=""><a href="city-life.html" class="tc-menu-inner">CITY & LIFE</a>
+                                            <div class="desc">100+ cities to better understand Chinese life</div>
+                                        </li>
+                                        <li id="menu-item-99" class=""><a href="guidence.html" class="tc-menu-inner">GUIDANCE</a>
+                                            <div class="desc">Detailed application guidance for all freshmen</div>
+                                        </li>
+                                        <li class="">
+                                            <div id="panel-w58fef074d40db-0-4-0" class="so-panel widget widget_button panel-first-child panel-last-child" data-index="4">
+                                                <div class="thim-widget-button thim-widget-button-base"><a class="widget-button tiny-rounded no-border small custom_style position-after" href="#" style="font-size: 13px;font-weight: 500;color: #ffffff;border-color: #fa394a;background-color: #fa394a;" data-hover="font-size: 13px;font-weight: 500;color: #fed1d4;border-color: #fa394a;background-color: #fa394a;">APPLY NOW<i class="fa fa-pencil" style="font-size: 14px;"></i> </a></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="widget-listingsearch" style="">
+                                    <div class="widget-content">
+                                        <form class="job_search_form  js-search-form" action="" method="get" role="search">
+                                            <div class="search_jobs clearfix visible-table search_jobs--frontpage">
+                                                <div class="inner-left" style="">
+                                                    <div class="visible-table table-wrapper" style="position: relative;">
+                                                        <div class="search-field-wrapper  search-filter-wrapper has-suggestion" style="width: 100%; position: absolute;top: 0;left: 0">
+                                                            <input class="search-field" autocomplete="off" type="text" name="search_keywords" id="search_keywords" placeholder="search" value="" style="border: none;width: 100%;height: 40px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="submit" style="float: right">
+                                                    <button class="search-submit" name="submit" style="border-radius: 100px;-webkit-border-radius: 100px;-moz-border-radius: 100px;-ms-border-radius: 100px;-o-border-radius: 100px;color: #fff;cursor: pointer;padding: 5px 15px;">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="menu-mobile-effect navbar-toggle" data-effect="mobile-effect"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <nav class="mobile-menu-container mobile-effect">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="universities.html" class="tc-menu-inner">UNIVERSITIES</a></li>
+                    <li class=""><a href="scholarships.html" class="tc-menu-inner">SCHOLARSHIPS</a></li>
+                    <li class=""><a href="city-life.html" class="tc-menu-inner">CITY & LIFE</a></li>
+                    <li class=""><a href="guidence.html" class="tc-menu-inner">GUIDANCE</a></li>
+                </ul>
+            </nav>
+            <div id="main-content">
+                <section class="content-area">
+                    <div class="top_site_main" style="color: #ffffff;background-image:url(images/bg-page.jpg);"> <span class="overlay-top-header" style="background:rgba(0,0,0,0.5);"></span>
+                        <div class="page-title-wrapper">
+                            <div class="banner-wrapper container">
+                                <h2>universities detail</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breadcrumbs-wrapper">
+                        <div class="container">
+                            <ul itemprop="breadcrumb" itemscope itemtype="#" id="breadcrumbs" class="breadcrumbs">
+                                <li itemprop="itemListElement" itemscope itemtype="#"><a itemprop="item" href="default.html" title="Home"><span itemprop="name">Home</span></a></li>
+                                <li itemprop="itemListElement" itemscope itemtype="#"><a itemprop="item" href="universities.html" title="Universities"><span itemprop="name">Universities</span></a></li>
+                                <li itemprop="itemListElement" itemscope itemtype="#"><a itemprop="item" href="universities-detail.html" title="Universities detail"><span itemprop="name">Universities detail</span></a></li>
+                                <li itemprop="itemListElement" itemscope itemtype="#"><span itemprop="name" title="Universities detail more"> Universities detail more</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="container site-content sidebar-right">
+                        <div class="row">
+                            <div id="sidebar" class="widget-area col-sm-4 sticky-sidebar" role="complementary">
+
+                                <div class="left  zjj-left fl">
+                                    <div class="bian"></div>
+                                    <div class="l_top">
+                                        <div class="s_logo ">
+                                            <a href="/Nanchang-University-185/"><img src="picture/logo_185.png" /></a>
+                                        </div>
+                                        <div class="l_t_left">
+                                            <p><span>Attribute : </span><a href="http://www.cucas.edu.cn/studyinchina/attribute/Public_Universities_23.html">Public University</a></p>
+                                            <p><span>Level : </span><a href="http://www.cucas.edu.cn/studyinchina/level/211_Project_Project_Universities_5.html">211 Project University</a></p>
+                                            <p><span>Type : </span><a href="http://www.cucas.edu.cn/studyinchina/type/Comprehensive_Universities_9.html">Comprehensive  University</a></p>
+                                            <p><span>Location : </span><a href="http://city.cucas.edu.cn/index?cityid=106">Nanchang</a> , <a href="http://www.cucas.edu.cn/studyinchina/location/Suburb_Universities_21.html">Suburb</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="l_mid">
+                                        <div class="arr_2"></div>
+                                        <h1><a href="/Nanchang-University-185/">Nanchang University</a></h1>
+                                        <p> The best university in Jiangxi Province</p>
+                                        <div class="clearfix">
+                                            <div id="starallscore" class="fl" style="width: 100px;"><img src="images/y_blank.png" alt="1">&nbsp;<img src="images/y_blank.png" alt="2">&nbsp;<img src="images/y_blank.png" alt="3">&nbsp;<img src="images/y_blank.png" alt="4">&nbsp;<img src="images/y_blank.png" alt="5"><input type="hidden" name="score" readonly="readonly"></div>
+                                            <span class="fl">0</span>
+                                            <p class="fr">
+
+                                                <a href="/Nanchang-University-185/reviews/">0</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="l_tags">
+                                        <ul class="tags clearfix">
+                                            <li class=" "><em class="t_1"></em>
+                                                <a href="/Nanchang-University-185/program/ ">Admission</a>
+                                            </li>
+
+                                            <li class=" "><em class="t_2"></em>
+                                                <a href="					  /Nanchang-University-185/accommodation/
+					 
+					 ">Accommodation</a>
+                                            </li>
+
+                                            <li class=" "><em class="t_3"></em>
+                                                <a href="					  /Nanchang-University-185/facilities/
+					 
+					 ">Facilities</a>
+                                            </li>
+
+                                            <li class=" "><em class="t_4"></em>
+                                                <a href="					 /Nanchang-University-185/fee-structure/
+					 ">Fees Structures</a>
+                                            </li>
+
+                                            <li class=" no_border"><em class="t_5"></em>
+                                                <a href="					 /Nanchang-University-185/scholarships/
+					 ">Scholarship</a>
+                                            </li>
+
+                                            <li class=" no_border"><em class="t_6"></em>
+                                                <a href="					 /Nanchang-University-185/documents/
+					 ">Documents</a>
+                                            </li>
+
+
+
+                                        </ul>
+                                        <div class="more clear">
+                                            <a href="javascript:;" id="menu">MORE<em class="t_7"></em></a>
+                                            <div id="pop_menu">
+                                                <ul>
+                                                    <li><a href="										 /Nanchang-University-185/why-NCU/
+										 ">Choosing Reasons</a></li>
+
+
+                                                    <li><a href="http://ranking.cucas.edu.cn/reviews/Nanchang_University_Ranking.html" target="_blank">Ranking</a></li>
+
+                                                    <li><a href="										 /Nanchang-University-185/videos/
+										 ">Video</a></li>
+
+
+
+                                                    <li><a href="http://www.cucas.edu.cn/visa/guide-for-countries.html" target="_blank">Visa Application</a></li>
+
+
+
+
+
+                                                </ul>
+                                                <div class="arrow"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <main id="main" class="site-main col-sm-8 alignleft">
+                                <article id="post-5428" class="post-5428 lp_course type-lp_course status-publish has-post-thumbnail hentry course_category-general course">
+                                    <div class="content zjj-right clearfix">
+                                        <h2><i class="f_l" style="width:30px;height:30px;margin-top:0;"></i>NCU Highlights</h2>
+
+                                        <div class="odd_pic clearfix">
+                                            <div>
+                                                <img src="picture/indexad1.jpg" />
+                                                <div class="shade">
+                                                    <div>
+                                                        <p>Check most complete and latest fee structure of NCU.</p>
+                                                        <a href="/Nanchang-University-185/fee-structure/">Check Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div>
+                                                <img src="picture/indexad2.jpg" />
+                                                <div class="shade">
+                                                    <div>
+                                                        <p>View the splendid campus of NCU in 360 degree.</p>
+                                                        <a href="/Nanchang-University-185/facilities/">Check Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div>
+                                                <img src="picture/indexad3.jpg" />
+                                                <div class="shade">
+                                                    <div>
+                                                        <p>Find top courses in NCU and apply online easily.</p>
+                                                        <a href="/Nanchang-University-185/program/">Check Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                        <div class="about_s about_text clearfix">
+                                            <h3><i class="ii_1"></i>School Introduction</h3>
+                                            <div class="inner">
+
+                                                <p>Nanchang University is a comprehensive university which characterized by &quot;Penetration of Arts, Science, Engineering and Medicine subjects, Combination of studying, research and production&quot;. It is one of the national &quot;211&quot; Project key universities that jointly constructed by the People&#39;s Government of Jiangxi Province and the Ministry of Education. It is also an important base of talents cultivation, scientific researching and transferring of the researching accomplishment into practical use for both Jiangxi Province and the country.</p>
+                                                <p>NCU is located in the historical and cultural city - Nanchang, the capital city of Jiangxi Province, which enjoys the names of &quot;a blessed place rich in culture and capable of nurturing... <a href="#">Learn More >></a>
+                                                    <div class="grid clearfix">
+                                                        <div class="effect-romeo col-md-6"><img alt="" src="picture/1438253934842118.jpg" style="width: 600px; height: 600px;" /><br />
+                                                            <div>
+                                                                <h2>Accommodation</h2>
+
+                                                                <p>The accommodation&#39;s &nbsp;price is RMB 1,000 or 1,250 per month in NCU.</p>
+                                                                <a href="http://school.cucas.edu.cn/Nanchang-University-185/accommodation/" target="_blank">View more</a> </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 grid_right">
+                                                            <div class="effect-milo col-md-12"><img alt="" src="picture/1438253972694893.jpg" style="width: 600px; height: 300px;" /><br />
+                                                                <div>
+                                                                    <h2>Facilities</h2>
+
+                                                                    <p>Life and study facilities are sufficient in its five campuses.</p>
+                                                                    <a href="http://school.cucas.edu.cn/Nanchang-University-185/facilities/" target="_blank">View more</a> </div>
+                                                            </div>
+
+                                                            <div class="effect-chico col-md-6"><img alt="" src="picture/1438254005734030.jpg" style="width: 300px; height: 300px;" /><br />
+                                                                <div>
+                                                                    <h3>Featured Program</h3>
+                                                                    <a href="http://school.cucas.edu.cn/Nanchang-University-185/program/Clinical-Medicine--MBBS-in-English--21669.html" target="_blank">View more</a> </div>
+                                                            </div>
+
+                                                            <div class="effect-chico col-md-6"><img alt="" src="picture/1438254026546227.jpg" style="width: 300px; height: 300px;" />​<br />
+                                                                <div>
+                                                                    <h3>Ranking of NCU</h3>
+                                                                    <a href="http://www.cucas.edu.cn/studyinchina/top/2015_Top_Universities_in_Nanchang_196-Nanchang.html" target="_blank">View more</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="share_exp clearfix" id="share_express">
+                                            <h3><i class="ii_2" style="background-position:0 -1976px;"></i>The Reason Why Choose NCU<a href="/Nanchang-University-185/why-NCU/" class="fr">MORE</a></h3>
+
+                                            <div class="clearfix box" id="box2">
+                                                <dl class="clearfix">
+                                                    <dd class="fl"><img src="picture/stu_photo.jpg" width="50" height="50" /></dd>
+                                                    <dt>
+								<p class="name"><a href="javascript:;">Reasons from Ahmed Halima Bashir</a></p>
+
+								<p class="pass">i heard good things about this university both from the internet and from my friends who are already studying in this university. i also like about them of the short duration and the English language they teach in. and also the location of the university.</p>
+								<ul class="info">
+									<li>1 week ago</li>
+									<li>Name : Ahmed Halima Bashir</li><li> From : Somalia</li>									
+								</ul>
+								
+																
+								</dt>
+                                                </dl>
+                                                <dl class="clearfix">
+                                                    <dd class="fl"><img src="picture/stu_photo.jpg" width="50" height="50" /></dd>
+                                                    <dt>
+								<p class="name"><a href="javascript:;">Reasons from ZYUULU MILIMO</a></p>
+
+								<p class="pass">Nanchang is a good university for international students as it displays quality education filled with good facilities and accommodation as required by foreign students. It is also well recognized by so many organization's and also by other countries.</p>
+								<ul class="info">
+									<li>2 months ago</li>
+									<li>Name : Zyuulu Milimo</li><li> From : Zambia</li>									
+								</ul>
+								
+																
+								</dt>
+                                                </dl>
+
+                                            </div>
+                                        </div>
+                                        <div class="video clearfix" id="share_video">
+
+                                            <h3><i class="ii_3"></i>Video Tour<a href="/Nanchang-University-185/videos/" class="fr">MORE</a></h3>
+                                            <div>
+                                                <div class="inner">
+                                                    <h5>Nanchang University</h5>
+
+
+                                                    <a href="javascript:;" onclick="show_video('https://www.youtube.com/watch?v=BEzu9uPhTkU')"><img src="picture/2f754cfa123b92dbff7dc3f2514e22c0.jpg" /><em></em></a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="inner">
+                                                    <h5>Medical School </h5>
+
+
+                                                    <a href="javascript:;" onclick="show_video('https://www.youtube.com/watch?v=5ypdM-n2dYI')"><img src="picture/ed855393244ed6d9512e85ffc74157fd.jpg" /><em></em></a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="inner">
+                                                    <h5>Snow Fall in NCU</h5>
+
+
+                                                    <a href="javascript:;" onclick="show_video('https://www.youtube.com/watch?v=LcH2Wbt68Jk')"><img src="picture/e6dfb17fccadab83824b5c26e000e985.jpg" /><em></em></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="download clearfix" id="share_upload">
+                                            <h3><i class="ii_4"></i>Useful Documents<a href="/Nanchang-University-185/documents/" class="fr">MORE</a></h3>
+
+                                            <div class="focusBox">
+                                                <ul class="clearfix file">
+                                                    <li>
+                                                        <dl class="clearfix" style="border-bottom: 1px solid #f0f0f0; font-size:16px; line-height:42px;">
+                                                            <dd>Title</dd>
+                                                            <dt style="text-align:right;">Download</dt>
+                                                        </dl>
+                                                        <dl class="clearfix  has_bg">
+                                                            <dd>
+                                                                <h5>International exchange and cooperation of NCU</h5>
+                                                            </dd>
+                                                            <dt><a href="http://www.cucas.edu.cn/school_new/download?id=1326" class="fr"></a></dt>
+                                                        </dl>
+                                                        <dl class="clearfix  has_bg">
+                                                            <dd>
+                                                                <h5>Brief introduction to Nanchang City</h5>
+                                                            </dd>
+                                                            <dt><a href="http://www.cucas.edu.cn/school_new/download?id=1324" class="fr"></a></dt>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <div class="vs clearfix col-md-12">
+                                            <div class="clearfix box">
+                                                <div class="vs_s" style="margin-right: 10px;">
+                                                    <img src="picture/logo_185.png" class="img-responsive" />
+                                                    <p>Nanchang University</p>
+                                                </div>
+                                                <div class="vs_s">
+                                                    <img src="picture/logo_484.png" class="img-responsive" />
+                                                    <p>Jiangxi University of Finance and Economics</p>
+                                                </div>
+                                                <div class="vs_icon"></div>
+                                                <a href="http://www.cucas.edu.cn/studyinchina/vs/select/Nanchang_University_vs_Jiangxi_University_of_Finance_and_Economics_185_484.html" class="result btn1">VS Now</a>
+                                            </div>
+
+                                            <div class="clearfix box">
+                                                <div class="vs_s" style="margin-right: 10px;">
+                                                    <img src="picture/logo_185.png" class="img-responsive" />
+                                                    <p>Nanchang University</p>
+                                                </div>
+                                                <div class="vs_s">
+                                                    <img src="picture/logo_161.png" class="img-responsive" />
+                                                    <p>Jiangxi Normal University</p>
+                                                </div>
+                                                <div class="vs_icon"></div>
+                                                <a href="http://www.cucas.edu.cn/studyinchina/vs/select/Nanchang_University_vs_Jiangxi_Normal_University_185_161.html" class="result btn1">VS Now</a>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="comment clear" id="jf_review">
+                                            <div class="clearfix">
+                                                <h4 class="fl"><i class="fl"></i>Students' Reviews</h4>
+                                                <a href="javascript:refresh_review();" class="fr fresh btn1"><i class="fl"></i>Refresh</a>
+                                            </div>
+                                            <div class="com_box clear">
+                                                <span class="fr" style="margin-bottom:20px;"><em> 0</em> reviews, <em> 0 </em>score</span>
+                                                <form class="ui form clear" action="" id="myform">
+                                                    <div style="display:none;" id="login_myform">
+                                                    </div>
+                                                    <div class="field">
+                                                        <div style="display:none;" id="login_content">
+                                                            <textarea id="content" name="content" placeholder="Leave your review of NCU on CUCAS"></textarea>
+                                                        </div>
+                                                        <div id="unlogin_content">
+                                                            <textarea id="contents" name="contents" placeholder="Leave your review of NCU on CUCAS" style="height:3em;min-height:3em;" onclick="check_login(185)"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div style="display:none" id="login_review">
+                                                        <div class="score clearfix clear">
+                                                            <div>
+                                                                <span class="fl">Campus/Facilities:</span>
+                                                                <input type="hidden" id="ev1" name="ev1" value="">
+                                                                <div id="star1"></div>
+                                                                <div id="result1"></div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="fl">Administration:</span>
+                                                                <input type="hidden" id="ev2" name="ev2" value="">
+                                                                <div id="star2"></div>
+                                                                <div id="result2"></div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="fl">Teaching Quality:</span>
+                                                                <input type="hidden" id="ev3" name="ev3" value="">
+                                                                <div id="star3"></div>
+                                                                <div id="result3"></div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="fl">Curriculum:</span>
+                                                                <input type="hidden" id="ev4" name="ev4" value="">
+                                                                <div id="star4"></div>
+                                                                <div id="result4"></div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="fl">Cafeteria:</span>
+                                                                <input type="hidden" id="ev5" name="ev5" value="">
+                                                                <div id="star5"></div>
+                                                                <div id="result5"></div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="fl">Value for Money:</span>
+                                                                <input type="hidden" id="ev6" name="ev6" value="">
+                                                                <div id="star6"></div>
+                                                                <div id="result6"></div>
+                                                            </div>
+                                                            <div>
+                                                                <span class="fl">Accommodation:</span>
+                                                                <input type="hidden" id="ev7" name="ev7" value="">
+                                                                <div id="star7"></div>
+                                                                <div id="result7"></div>
+                                                            </div>
+
+                                                        </div>
+                                                        <input type="hidden" name="sid" value="185" id="">
+                                                        <input type="button" value="Submit" class="btn1" onclick="sub_mit()" />
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+
+                                            <div class="get_review clearfix box">
+                                                <div class="ui inverted dimmer" id="zjj_active">
+                                                    <div class="ui text loader">Loading</div>
+                                                </div>
+                                                <div id="get_review">
+
+                                                </div>
+                                                <div class="text-center" style="padding:30px 0;" id="unlogin_review"><a href="javascript:;" class="btn1" onclick="check_login(185)">Add A Review to Let Thousands Know</a></div>
+                                                <div class="text-center" style="padding:30px 0;display:none;" id="login_loginreview"><a href="#jf_review" class="btn1">Add A Review to Let Thousands Know</a></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </article>
+                            </main>
+
+                        </div>
+                    </div>
+                </section>
+                <footer id="colophon" class=" site-footer">
+                    <div class="footer">
+                        <div class="container">
+                            <div class="row">
+                                <aside id="siteorigin-panels-builder-9" class="widget widget_siteorigin-panels-builder footer_widget">
+                                    <div id="pl-w57e9cc2c86af4" class="panel-layout">
+                                        <div id="pg-w57e9cc2c86af4-0" class="panel-grid panel-no-style">
+                                            <div id="pgc-w57e9cc2c86af4-0-0" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-0-0" class="so-panel widget widget_black-studio-tinymce widget_black_studio_tinymce panel-first-child" data-index="0">
+                                                    <div class="textwidget">
+                                                        <div class="thim-footer-location">
+                                                            <p>
+                                                                <a href="default.html"><img class="alignnone size-full wp-image-10" src="picture/logo.png" alt="logo-eduma-the-best-lms-wordpress-theme" width="145" height="40" /></a>
+                                                            </p>
+                                                            <p class="info"><i class="fa fa-phone"></i><a href="tel:0086 025 58745604"> + 0086 025 58745604</a></p>
+                                                            <p class="info"><i class="fa fa-envelope"></i><a href="mailto:info@scholarshipchina.com">info@scholarshipchina.com </a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="panel-w57e9cc2c86af4-0-0-1" class="so-panel widget widget_social panel-last-child" data-index="1">
+                                                    <div class="thim-widget-social thim-widget-social-base">
+                                                        <div class="thim-social">
+                                                            <ul class="social_link" style="margin-top: 20px">
+                                                                <li><a class="facebook hasTooltip" href="#" target="_self"><i class="fa fa-facebook"></i></a></li>
+                                                                <li><a class="twitter hasTooltip" href="#" target="_self"><i class="fa fa-twitter"></i></a></li>
+                                                                <li><a class="google-plus hasTooltip" href="" target="_self"><i class="fa fa-weixin"></i></a></li>
+                                                                <li><a class="pinterest hasTooltip" href="#" target="_self"><i class="fa fa-envelope"></i></a></li>
+                                                                <li><a class="pinterest hasTooltip" href="#" target="_self"><i class="fa fa-phone"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-1" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-1-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="2">
+                                                    <h3 class="widget-title">ScholarshipChina</h3>
+                                                    <div class="menu-company-container">
+                                                        <ul id="menu-company" class="menu">
+                                                            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2901 current_page_item menu-item-3421 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="about-us.html" class="tc-menu-inner">About Us</a></li>
+                                                            <li id="menu-item-3424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3424 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="successful-cases.html" class="tc-menu-inner">Successful Cases</a></li>
+                                                            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3422 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="contact.html" class="tc-menu-inner">Maps</a></li>
+                                                            <li id="menu-item-3423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3423 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="forum.html" class="tc-menu-inner">Forum</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-2" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-2-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="3">
+                                                    <h3 class="widget-title">Courses</h3>
+                                                    <div class="menu-links-container">
+                                                        <ul id="menu-links" class="menu">
+                                                            <li id="menu-item-5749" class="menu-item menu-item-type-post_type_archive menu-item-object-lp_course menu-item-5749 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="language.html" class="tc-menu-inner">Language</a></li>
+                                                            <li id="menu-item-3426" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3426 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="undergraduate.html" class="tc-menu-inner">Undergraduate</a></li>
+                                                            <li id="menu-item-4591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4591 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="postgraducate.html" class="tc-menu-inner">Postgraducate</a></li>
+                                                            <li id="menu-item-3427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3427 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="doctor.html" class="tc-menu-inner">Doctor</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-3" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-3-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="4">
+                                                    <h3 class="widget-title">Service</h3>
+                                                    <div class="menu-support-container">
+                                                        <ul id="menu-support" class="menu">
+                                                            <li id="menu-item-1757" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1757 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="Pick-up-service.html" class="tc-menu-inner">Pick Up</a></li>
+                                                            <li id="menu-item-1758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1758 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="tracking-code.html" class="tc-menu-inner">Tracking Code</a></li>
+                                                            <li id="menu-item-1759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1759 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="guidence.html" class="tc-menu-inner">Guidance</a></li>
+                                                            <li id="menu-item-1760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1760 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="study-tours.html" class="tc-menu-inner">Study Tour</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-4" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-4-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="5">
+                                                    <h3 class="widget-title">Helpful Links</h3>
+                                                    <div class="menu-recommend-container">
+                                                        <ul id="menu-recommend" class="menu">
+                                                            <li id="menu-item-6718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6718 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="scholarship-types.html" class="tc-menu-inner">Scholarship Types</a></li>
+                                                            <li id="menu-item-6719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6719 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="application-strategies.html" class="tc-menu-inner">Application Strategies</a></li>
+                                                            <li id="menu-item-3429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3429 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="terms-conditions.html" class="tc-menu-inner">Terms & Conditions</a></li>
+                                                            <li id="menu-item-5930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5930 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="payment-method.html" class="tc-menu-inner">Payment Method</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-area">
+                        <div class="container">
+                            <div class="copyright-content">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="text-copyright">Floor 9, Block 5, Xingzhihui Business Garden, No.19, Xinghuo Road, High-Tech Zone, Nanjing, P.R.China</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <a href="#" id="back-to-top"> <i class="fa fa-chevron-up"></i> </a>
+    </div>
+    <script data-cfasync="false" type="text/javascript">
+        window.onload = function() {
+            setTimeout(function() {
+                var body = document.getElementById("thim-body"),
+                    thim_preload = document.getElementById("preload"),
+                    len = body.childNodes.length,
+                    class_name = body.className.replace(/(?:^|\s)thim-body-preload(?!\S)/, '').replace(/(?:^|\s)thim-body-load-overlay(?!\S)/, '');
+
+                body.className = class_name;
+                if (typeof thim_preload !== 'undefined' && thim_preload !== null) {
+                    for (var i = 0; i < len; i++) {
+                        if (body.childNodes[i].id !== 'undefined' && body.childNodes[i].id == "preload") {
+                            body.removeChild(body.childNodes[i]);
+                            break;
+                        }
+                    }
+                }
+            }, 500);
+        };
+
+    </script>
+    <style type="text/css" media="all" id="siteorigin-panels-layouts-footer">
+        /* Layout tc-megamenu-5974 */
+        
+        #pgc-tc-megamenu-5974-0-0,
+        #pgc-tc-megamenu-5974-0-1 {
+            width: 31%;
+            width: calc(31% - ( 0.69 * 30px))
+        }
+        
+        #pgc-tc-megamenu-5974-0-2 {
+            width: 38%;
+            width: calc(38% - ( 0.62 * 30px))
+        }
+        
+        #pl-tc-megamenu-5974 .so-panel {
+            margin-bottom: 30px
+        }
+        
+        #pl-tc-megamenu-5974 .so-panel:last-child {
+            margin-bottom: 0px
+        }
+        
+        @media (max-width:767px) {
+            #pg-tc-megamenu-5974-0.panel-no-style,
+            #pg-tc-megamenu-5974-0.panel-has-style>.panel-row-style {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+            #pg-tc-megamenu-5974-0 .panel-grid-cell {
+                margin-right: 0
+            }
+            #pg-tc-megamenu-5974-0 .panel-grid-cell {
+                width: 100%
+            }
+            #pgc-tc-megamenu-5974-0-0,
+            #pgc-tc-megamenu-5974-0-1 {
+                margin-bottom: 30px
+            }
+            #pl-tc-megamenu-5974 .panel-grid-cell {
+                padding: 0
+            }
+            #pl-tc-megamenu-5974 .panel-grid .panel-grid-cell-empty {
+                display: none
+            }
+            #pl-tc-megamenu-5974 .panel-grid .panel-grid-cell-mobile-last {
+                margin-bottom: 0px
+            }
+        }
+        /* Layout w57e9cc2c86af4 */
+        
+        #pgc-w57e9cc2c86af4-0-0 {
+            width: 33.3%;
+            /*            width: calc(33.3% - ( 0.667 * 30px))*/
+        }
+        
+        #pgc-w57e9cc2c86af4-0-1,
+        #pgc-w57e9cc2c86af4-0-2,
+        #pgc-w57e9cc2c86af4-0-3,
+        #pgc-w57e9cc2c86af4-0-4 {
+            width: 16.675%;
+            width: calc(16.675% - ( 0.83325 * 30px))
+        }
+        
+        #pl-w57e9cc2c86af4 .so-panel {
+            margin-bottom: 30px
+        }
+        
+        #pl-w57e9cc2c86af4 .so-panel:last-child {
+            margin-bottom: 0px
+        }
+        
+        @media (max-width:767px) {
+            #pg-w57e9cc2c86af4-0.panel-no-style,
+            #pg-w57e9cc2c86af4-0.panel-has-style>.panel-row-style {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+            #pg-w57e9cc2c86af4-0 .panel-grid-cell {
+                margin-right: 0
+            }
+            #pg-w57e9cc2c86af4-0 .panel-grid-cell {
+                width: 100%
+            }
+            #pgc-w57e9cc2c86af4-0-0,
+            #pgc-w57e9cc2c86af4-0-1,
+            #pgc-w57e9cc2c86af4-0-2,
+            #pgc-w57e9cc2c86af4-0-3 {
+                margin-bottom: 30px
+            }
+            #pl-w57e9cc2c86af4 .panel-grid-cell {
+                padding: 0
+            }
+            #pl-w57e9cc2c86af4 .panel-grid .panel-grid-cell-empty {
+                display: none
+            }
+            #pl-w57e9cc2c86af4 .panel-grid .panel-grid-cell-mobile-last {
+                margin-bottom: 0px
+            }
+        }
+
+    </style>
+
+    <script type='text/javascript'>
+        var jalerts_text = {
+            "okButton": "Ok",
+            "cancelButton": "Cancel"
+        };
+        var woof_ext_init_functions = null;
+        var icheck_skin = {};
+        icheck_skin = 'none';
+        var is_woof_use_chosen = 1;
+        var woof_current_values = '[]';
+        //+++
+        var woof_lang_loading = "Loading ...";
+
+
+        var woof_lang_show_products_filter = "show products filter";
+        var woof_lang_hide_products_filter = "hide products filter";
+        var woof_lang_pricerange = "price range";
+
+        //+++
+
+        var woof_use_beauty_scroll = 0;
+        //+++
+        var woof_autosubmit = 1;
+        var woof_ajaxurl = "https://educationwp.thimpress.com/demo-university-2/wp-admin/admin-ajax.php";
+        var woof_submit_link = "";
+        var woof_is_ajax = 0;
+        var woof_ajax_redraw = 0;
+        var woof_ajax_page_num = 1;
+        var woof_ajax_first_done = false;
+        var woof_checkboxes_slide_flag = true;
+
+
+        //toggles
+        var woof_toggle_type = "image";
+
+        var woof_toggle_closed_text = "-";
+        var woof_toggle_opened_text = "+";
+
+        var woof_toggle_closed_image = "https://educationwp.thimpress.com/demo-university-2/wp-content/plugins/woocommerce-products-filter/img/plus3.png";
+        var woof_toggle_opened_image = "https://educationwp.thimpress.com/demo-university-2/wp-content/plugins/woocommerce-products-filter/img/minus3.png";
+
+
+        //indexes which can be displayed in red buttons panel
+        var woof_accept_array = ["min_price", "orderby", "perpage", , "product_visibility", "product_cat", "product_tag", "pa_color", "pa_size"];
+
+
+
+
+        //***
+        //for extensions
+
+        var woof_ext_init_functions = null;
+
+
+
+        var woof_overlay_skin = "default";
+        jQuery(function() {
+            woof_current_values = jQuery.parseJSON(woof_current_values);
+            if (woof_current_values.length == 0) {
+                woof_current_values = {};
+            }
+
+        });
+
+        function woof_js_after_ajax_done() {
+            jQuery(document).trigger('woof_ajax_done');
+        }
+
+    </script>
+    <style type="text/css">
+        .woof_edit_view {
+            display: none;
+        }
+
+    </style>
+
+    <script type="text/javascript" defer src="js/autoptimize_9eb2d5d333f134a6ebe9fae32b4efebe.js"></script>
+    <script>
+        var $ = jQuery;
+        $(function() {
+            $("#menu").on("click", function() {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(this).css({
+                        "background": "url(../images/l_tag.png) no-repeat 50px -120px"
+                    });
+                    $(this).siblings("#pop_menu").hide();
+                } else {
+                    $(this).addClass("active");
+                    $(this).css({
+                        "background": "url(../images/l_tag.png) no-repeat 50px -318px"
+                    });
+                    $(this).siblings("#pop_menu").show();
+                }
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+#new_counselor {
+    width: 1170px;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    margin-right: -585px;
+    z-index: 10000;
+}
+
+#new_counselor ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#new_counselor ul ul li {
+    margin-bottom: 0;
+}
+
+.sha_contact {
+    height: 60px;
+    float: right;
+}
+
+.sha_contact .text {
+    float: left;
+    height: 60px;
+    padding: 12px 30px;
+    color: #fff;
+    background: #fa394a;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.sha_contact .Li {
+    float: left;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.sha_contact .Li .box {
+    width: 60px;
+    height: 60px;
+    background: #eb6349;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.sha_contact .li2 .box {
+    background: #1e9ef6;
+}
+
+.sha_contact .li3 .box {
+    background: #169e41;
+}
+
+.sha_contact .Li .box img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sha_contact .Li .box span {
+    color: #fff;
+    font-size: 13px;
+}
+
+.sha_contact .Li:hover .show {
+    display: block;
+}
+
+.sha_contact .Li .show {
+    width: 310px;
+    height: 140px;
+    padding: 10px;
+    background: #eb6349;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -140px;
+    display: none;
+}
+
+.sha_contact .li2 .show {
+    background: #1e9ef6;
+}
+
+.sha_contact .li3 .show {
+    background: #169e41;
+}
+
+.sha_contact .Li .show .left {
+    width: 100px;
+    height: 100%;
+    float: left;
+    background: #fff;
+    padding: 3px;
+}
+
+.sha_contact .Li .show .left p {
+    width: 100%;
+    line-height: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.sha_contact .li2 .left p {
+    color: #1e9ef6;
+}
+
+.sha_contact .Li .show .right {
+    width: 180px;
+    height: 100%;
+    padding: 5px 0;
+    float: right;
+}
+
+.sha_contact .Li .show .right li {
+    height: 40px;
+    padding-left: 24px;
+    background: url(../images/phone.png) no-repeat left 1px;
+}
+
+.sha_contact .Li .show .right li h4 {
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0;
+}
+
+.sha_contact .Li .show .right li h5 {
+    font-size: 12px;
+    color: #fff;
+    opacity: .9;
+    margin: 0;
+    font-weight: normal;
+}
+
+.sha_contact .Li .show .right .skype {
+    background: url(../images/skype.png) no-repeat left 1px;
+}
+
+.sha_contact .Li .show .right .whatsapp {
+    background: url(../images/whatsapp.png) no-repeat left 1px;
+}
+
+@media (max-width:1024px) {
+    #new_counselor {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        right: 60px;
+        margin-right: 0;
+        z-index: 10000;
+    }
+}
+
+@media (max-width:767px) {
+    #new_counselor {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-right: 0;
+        z-index: 10000;
+    }
+}

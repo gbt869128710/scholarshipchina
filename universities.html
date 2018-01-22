@@ -1,0 +1,2721 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" media="all" href="css/autoptimize_e509c0b1fd06374eeab617b8b7d3b5b8.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="picture/logos.png">
+    <title>Universities - ScholarshipChina</title>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type="text/javascript">
+        var ajaxurl = 'https://educationwp.thimpress.com/demo-university-2/wp-admin/admin-ajax.php';
+
+    </script>
+    <script>
+        var woof_ajaxurl = "https://educationwp.thimpress.com/demo-university-2/wp-admin/admin-ajax.php";
+
+        var woof_lang = {
+            'orderby': "orderby",
+            'date': "date",
+            'perpage': "per page",
+            'pricerange': "price range",
+            'menu_order': "menu order",
+            'popularity': "popularity",
+            'rating': "rating",
+            'price': "price low to high",
+            'price-desc': "price high to low"
+        };
+
+        if (typeof woof_lang_custom == 'undefined') {
+            var woof_lang_custom = {}; //!!important
+        }
+
+        //***
+
+        var woof_is_mobile = 0;
+
+
+
+        var woof_show_price_search_button = 0;
+        var woof_show_price_search_type = 0;
+        woof_show_price_search_button = 1;
+
+        var woof_show_price_search_type = 3;
+
+        var swoof_search_slug = "swoof";
+
+
+        var icheck_skin = {};
+        icheck_skin = 'none';
+
+        var is_woof_use_chosen = 1;
+
+
+
+        var woof_current_values = '{"swoof":"1","min_price":"16","max_price":"36"}';
+        //+++
+        var woof_lang_loading = "Loading ...";
+
+
+        var woof_lang_show_products_filter = "show products filter";
+        var woof_lang_hide_products_filter = "hide products filter";
+        var woof_lang_pricerange = "price range";
+
+        //+++
+
+        var woof_use_beauty_scroll = 0;
+        //+++
+        var woof_autosubmit = 1;
+        var woof_ajaxurl = "https://educationwp.thimpress.com/demo-university-2/wp-admin/admin-ajax.php";
+        var woof_submit_link = "";
+        var woof_is_ajax = 0;
+        var woof_ajax_redraw = 0;
+        var woof_ajax_page_num = 1;
+        var woof_ajax_first_done = false;
+        var woof_checkboxes_slide_flag = true;
+
+
+        //toggles
+        var woof_toggle_type = "image";
+
+        var woof_toggle_closed_text = "-";
+        var woof_toggle_opened_text = "+";
+
+        var woof_toggle_closed_image = "https://educationwp.thimpress.com/demo-university-2/wp-content/plugins/woocommerce-products-filter/img/plus3.png";
+        var woof_toggle_opened_image = "https://educationwp.thimpress.com/demo-university-2/wp-content/plugins/woocommerce-products-filter/img/minus3.png";
+
+
+        //indexes which can be displayed in red buttons panel
+        var woof_accept_array = ["min_price", "orderby", "perpage", , "product_visibility", "product_cat", "product_tag", "pa_color", "pa_size"];
+
+
+
+
+        //***
+        //for extensions
+
+        var woof_ext_init_functions = null;
+
+
+
+        var woof_overlay_skin = "default";
+
+
+        jQuery(function() {
+            woof_current_values = jQuery.parseJSON(woof_current_values);
+            if (woof_current_values.length == 0) {
+                woof_current_values = {};
+            }
+
+        });
+
+        function woof_js_after_ajax_done() {
+            jQuery(document).trigger('woof_ajax_done');
+        }
+
+    </script>
+    <style>
+        .product-grid .product__title a.button.add_to_cart_button,
+        .product-grid .product__title a.button.add_to_cart_button:hover,
+        .product-grid .product__title a.button.add_to_cart_button:before,
+        .woocommerce div.product .woocommerce-tabs .entry-content #reviews #review_form_wrapper .comment-form .form-submit .submit,
+        .woocommerce div.product .woocommerce-tabs .entry-content #reviews #review_form_wrapper .comment-form .form-submit .submit:hover,
+        .quickview .product-info .right .cart button.button:hover,
+        .widget_shopping_cart .widget_shopping_cart_content .buttons a.checkout:hover,
+        .woocommerce div.product form.cart .button:hover,
+        .woocommerce-page div.product form.cart .button:hover,
+        .woocommerce #payment #place_order:hover,
+        .woocommerce-page #payment #place_order:hover,
+        .woocommerce .wc-proceed-to-checkout a.button:hover,
+        .woocommerce-page .wc-proceed-to-checkout a.button:hover,
+        .quickview .product-info .right .cart button.button,
+        .widget_shopping_cart .widget_shopping_cart_content .buttons a.checkout,
+        .woocommerce div.product form.cart .button,
+        .woocommerce-page div.product form.cart .button,
+        .woocommerce #payment #place_order,
+        .woocommerce-page #payment #place_order,
+        .woocommerce .wc-proceed-to-checkout a.button,
+        .woocommerce-page .wc-proceed-to-checkout a.button,
+        #customer_login form input[type=submit],
+        #customer_login form input[type=submit]:hover,
+        .woocommerce .reset_password form input[type=submit],
+        .woocommerce .reset_password form input[type=submit]:hover,
+        .menu-right .thim-link-login a,
+        .menu-right .thim-link-login a:hover,
+        .woocommerce-MyAccount-content form input.button,
+        .woocommerce-MyAccount-content form input.button:hover {
+            color: #fff;
+        }
+        
+        .product-grid .product__title a.button.add_to_cart_button:hover,
+        .woocommerce div.product .woocommerce-tabs .entry-content #reviews #review_form_wrapper .comment-form .form-submit .submit:hover,
+        .quickview .product-info .right .cart button.button:hover,
+        .widget_shopping_cart .widget_shopping_cart_content .buttons a.checkout:hover,
+        .woocommerce div.product form.cart .button:hover,
+        .woocommerce-page div.product form.cart .button:hover,
+        .woocommerce #payment #place_order:hover,
+        .woocommerce-page #payment #place_order:hover,
+        .woocommerce .wc-proceed-to-checkout a.button:hover,
+        .woocommerce-page .wc-proceed-to-checkout a.button:hover,
+        #customer_login form input[type=submit]:hover,
+        .woocommerce .reset_password form input[type=submit]:hover,
+        .rev-btn.thim-slider-button:hover,
+        .single-post .page-content article .page-content-inner .entry-content .pmpro_content_message a:hover,
+        .woocommerce-MyAccount-content form input.button:hover {
+            background: #fa394a;
+        }
+        
+        .loop-pagination li .page-numbers.current,
+        .loop-pagination li .page-numbers:hover {
+            color: #fff;
+        }
+        
+        #back-to-top:hover .fa-chevron-up {
+            color: #fff;
+        }
+        
+        .woocommerce .add_to_cart_button.ajax_add_to_cart {
+            color: #fff;
+            background: #fa394a;
+        }
+        
+        .woocommerce .add_to_cart_button.ajax_add_to_cart:hover,
+        .thim-course-megamenu .course-readmore:hover {
+            color: #fff;
+            background: #dd0640;
+        }
+        
+        #toolbar .widget_nav_menu .menu>li>a,
+        #toolbar .widget_nav_menu .menu>li>span,
+        .navigation .width-navigation .navbar-nav>li>a,
+        .navigation .width-navigation .navbar-nav>li>span,
+        .thim-course-search-overlay .search-toggle,
+        .widget_shopping_cart .minicart_hover .cart-items-number,
+        .menu-right .search-form:after {
+            color: #fff;
+        }
+        
+        .thim-course-megamenu .course-readmore {
+            color: #fff
+        }
+        
+        .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready {
+            display: none;
+        }
+        
+        .mfp-bg.my-mfp-zoom-in.mfp-ready {
+            display: none;
+        }
+        
+        #pg-2801-1 {
+            margin-top: 50px;
+        }
+        
+        #pgc-2801-1-0 {
+            width: 100%;
+        }
+        
+        .thim-carousel-course-categories .owl-carousel .owl-buttons .owl-next:hover,
+        .thim-carousel-course-categories .owl-carousel .owl-buttons .owl-prev:hover {
+            background-color: rgba(250, 57, 74, .8);
+        }
+        
+        .thim-carousel-course-categories .owl-carousel .owl-buttons .owl-next:hover i,
+        .thim-carousel-course-categories .owl-carousel .owl-buttons .owl-prev:hover i {
+            color: #fff;
+        }
+        
+        .site-header .navbar-nav>li {
+            width: 19%;
+            text-align: left;
+            padding: 25px;
+            border-right: 1px solid #f5f5f5;
+        }
+        
+        .site-header .navbar-nav>li:last-of-type {
+            border-right: none;
+        }
+        
+        .site-header.bg-custom-sticky.affix-top .navbar-nav>li {
+            display: none;
+            font-size: 11px;
+            color: #999;
+            line-height: 1.2;
+        }
+        
+        .site-header.bg-custom-sticky.affix .navbar-nav>li>a {
+            padding: 0;
+            font-weight: 500;
+        }
+        
+        .site-header.bg-custom-sticky.affix .navbar-nav>li>.desc {
+            font-size: 11px;
+            color: #999;
+            line-height: 1.2;
+        }
+        
+        #masthead .navigation {
+            padding: 0;
+        }
+        
+        .navigation .width-logo {
+            padding-top: 25px;
+            padding-bottom: 5px;
+        }
+        
+        .site-header .navbar-nav>li {
+            max-height: 108px;
+            height: 108px;
+        }
+        
+        .thim-widget-button .widget-button.small {
+            padding: 0 23px;
+        }
+        
+        #panel-w58fef074d40db-0-4-0 {
+            margin-top: 8px;
+        }
+        
+        footer#colophon .thim-footer-location img {
+            margin-bottom: 17px;
+        }
+        
+        .mobile-menu-container ul li>a {
+            color: #fff;
+        }
+        
+        .menu-mobile-effect.navbar-toggle span.icon-bar {
+            background-color: #fff;
+        }
+        
+        .site-header,
+        .site-header.header_v2 .width-navigation {
+            background-color: transparent;
+        }
+        
+        .product-grid .product__title a.button.add_to_cart_button:before {
+            content: "Read More";
+            font: normal normal normal 14px/1 roboto;
+            line-height: 40px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        
+        .product-grid .product__title a.button.add_to_cart_button {
+            width: auto;
+            line-height: 40px;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-size: 0 !important;
+        }
+        
+        .product-grid .product__title a.button.add_to_cart_button:hover {
+            width: auto;
+            line-height: 40px;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-size: 13px !important;
+        }
+        
+        .mfp-close:hover {
+            color: #fff;
+            background: #fa394a;
+        }
+        
+        .cart .fa:nth-child(2) {
+            color: #fa394a;
+        }
+        
+        .cart .fa {
+            display: none;
+        }
+        
+        .cart .fa.active {
+            display: block;
+        }
+        
+        .select2-container .select2-choice .select2-arrow {
+            display: inline-block;
+            width: 18px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-left: 1px solid #aaa;
+            border-radius: 0 4px 4px 0;
+            background-clip: padding-box;
+            background: #ccc;
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
+            background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+            background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0);
+            background-image: linear-gradient(top, #ccc 0%, #eee 60%);
+        }
+        
+        .select2-container {
+            box-sizing: border-box;
+            display: block;
+            margin: 0;
+            position: relative;
+            vertical-align: middle;
+            font-size: 12px;
+            float: left;
+            width: calc(100% - 78px);
+        }
+        
+        .select2-container .select2-choice {
+            border-color: #ebebeb !important;
+            background: #fff;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            height: 40px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 15px;
+            display: block;
+            padding: 0 0 0 8px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #aaa;
+            white-space: nowrap;
+            color: #444;
+            text-decoration: none;
+            border-radius: 4px;
+            user-select: none;
+        }
+        
+        .select2-container .select2-choice>.select2-chosen {
+            margin-right: 26px;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: 700;
+        }
+        
+        .select2-container .select2-choice .select2-arrow {
+            border-left: 1px solid #ebebeb;
+            width: 40px;
+            text-align: center;
+            background: none;
+            -moz-transition: all 300ms ease-in-out;
+            -o-transition: all 300ms ease-in-out;
+            -webkit-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
+        }
+        
+        .select2-container.select2-dropdown-open .select2-choice .select2-arrow {
+            background-color: rgba(245, 245, 246, 0.8);
+        }
+        
+        .select2-offscreen,
+        .select2-offscreen:focus {
+            clip: rect(0 0 0 0) !important;
+            width: 1px !important;
+            height: 1px !important;
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            position: absolute !important;
+            outline: 0 !important;
+            left: 0px !important;
+            top: 0px !important;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 5px 12px !important;
+            font-size: 12px;
+            line-height: 1.42857143;
+            border-radius: 3px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        
+        .select2-display-none {
+            display: none;
+        }
+        
+        .select2-search {
+            display: inline-block;
+            width: 100%;
+            min-height: 26px;
+            margin: 0;
+            padding-left: 4px;
+            padding-right: 4px;
+            position: relative;
+            z-index: 10000;
+            white-space: nowrap;
+        }
+        
+        .select2-drop {
+            /*            margin-top: -1px;*/
+            position: absolute;
+            left: 20px;
+            width: 85%;
+            height: 250px;
+            overflow: auto;
+            bottom: 273.813px;
+            top: auto;
+            z-index: 9999;
+            top: 100%;
+            background: #fff;
+            color: #000;
+            border: 1px solid #aaa;
+            border-top: 0;
+            border-radius: 0 0 4px 4px;
+            -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+            box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+        }
+        
+        .select2-drop .select2-search {
+            position: relative;
+            padding: 12px 15px;
+        }
+        
+        .select2-drop .select2-search .select2-input {
+            width: 100%;
+        }
+        
+        .select2-search-fa {
+            position: absolute;
+            right: 24px;
+            top: 18px;
+            width: 20px;
+            height: 20px;
+            background: url("picture/search.png")center center no-repeat;
+            background-size: contain;
+            cursor: pointer;
+        }
+        
+        .thim-login form#loginform input[type=submit],
+        input[type=submit].btn {
+            color: #fff;
+        }
+        
+        .thim-login form#loginform input[type=submit]:hover,
+        input[type=submit].btn:hover {
+            background-color: #dd0640;
+            color: #fff;
+        }
+        
+        .select2-drop .select2-results .select2-result-selectable {
+            background: transparent;
+            color: #666;
+            -moz-transition: all 300ms ease-in-out;
+            -o-transition: all 300ms ease-in-out;
+            -webkit-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
+            padding: 0;
+        }
+        
+        .select2-drop .select2-results .select2-result-label {
+            padding: 4px 15px;
+        }
+        
+        .select2-drop .select2-results .select2-result-selectable:hover,
+        .select2-drop .select2-results .select2-result-selectable.select2-highlighted {
+            background: #f3f3f3;
+            color: #303641;
+        }
+        
+        .city_list {
+            height: 475px;
+        }
+        
+        .list_map {
+            width: 1170px;
+            height: 450px;
+            margin: 0 auto;
+        }
+        
+        .list_map_right {
+            width: 600px;
+            height: 450px;
+            float: left;
+            margin-left: 70px;
+        }
+        
+        .list_region {
+            width: 180px;
+            height: 450px;
+            margin: 0 auto;
+            float: left;
+        }
+        
+        .Region {
+            width: 180px;
+            height: 45px;
+            border: #ad0301 solid 2px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            padding: 10px 12px;
+            text-transform: none;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .list_region .Region {
+            padding: 0px;
+        }
+        
+        .list_region .Region a {
+            display: block;
+            line-height: 45px;
+            color: #fff;
+        }
+        
+        .list_city {
+            width: 350px;
+            height: 450px;
+            margin: 0 0 0 70px;
+            float: left;
+        }
+        
+        .city_top {
+            width: 340px;
+            height: 35px;
+            background: #FA394A;
+            padding: 8px 18px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        .city_top a {
+            color: #fff;
+            margin-right: 12px;
+            font-size: 17px;
+        }
+        
+        .city_prompt {
+            width: 340px;
+            height: 35px;
+            background: #d4d4d4;
+            padding: 8px 18px;
+            color: #737373;
+            font-size: 12px;
+        }
+        
+        .city_text {
+            width: 340px;
+            height: 340px;
+            background: #fff;
+            padding: 8px 18px;
+            color: #222;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .city_text ul {
+            padding-left: 18px;
+            margin-bottom: 25px;
+        }
+        
+        .city_text ul li {
+            list-style-type: disc;
+            color: #FA394A!important;
+            font-size: 14px;
+            margin: 6px 0;
+        }
+        
+        .city_text ul li a,
+        .city_text ul li a:hover {
+            color: #666;
+        }
+        
+        .r {
+            width: 123px;
+            height: 35px;
+            background: #FA394A;
+            border-radius: 40px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 35px;
+        }
+        
+        .r a {
+            color: white;
+        }
+        
+        .thim-login form#loginform input[type=submit]:hover {
+            background-color: #dd0640;
+            color: #fff;
+        }
+        
+        .widget-listingsearch {
+            float: right;
+            margin-top: 35px;
+            z-index: 3;
+            width: 272px;
+            height: 50px;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+        }
+        
+        .inner-left {
+            float: left;
+            height: 40px;
+            width: 212px;
+            background: #fff;
+            border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            overflow: hidden;
+        }
+        
+        button:hover {
+            background-color: #dd0640;
+        }
+        
+        .affix .widget-listingsearch {
+            display: none;
+        }
+        
+        #toolbar .widget_search {
+            float: left;
+        }
+        
+        #toolbar .widget_search .search-form label .search-fields {
+            border: 0;
+            line-height: 30px;
+            height: 30px;
+            padding: 0 10px;
+            font-size: 13px;
+            width: 180px;
+            position: absolute;
+            top: -5px;
+            right: 0;
+            left: 15px;
+            z-index: 999;
+            background: #444;
+        }
+        
+        #toolbar .widget_search .search-form:after {
+            left: 170px;
+            top: 0;
+            line-height: 16px;
+            height: 16px;
+            font-size: 14px;
+            width: 20px;
+            z-index: 999;
+        }
+        
+        #search-4 {
+            display: none;
+        }
+        
+        .widget-listingsearch {
+            display: block;
+        }
+        
+        .mapper {
+            position: relative;
+            height: 418px;
+            width: 497px;
+            padding: 0px;
+            float: left;
+        }
+        
+        @media (max-width:1024px) {
+            #search-4 {
+                display: inline-block;
+            }
+            .widget-listingsearch {
+                display: none;
+            }
+            .list_map_right {
+                width: 500px;
+                margin-left: 10px;
+            }
+            .list_city {
+                width: 273px;
+                height: 450px;
+                margin: 0 0 0 20px;
+                float: left;
+            }
+            .list_map {
+                width: 100%;
+            }
+            .city_top {
+                width: 300px;
+            }
+            .city_text ul {
+                padding-left: 0;
+            }
+        }
+        
+        @media (max-width:768px) {
+            #search-4 {
+                display: inline-block;
+            }
+            .widget-listingsearch {
+                display: none;
+            }
+            #toolbar .widget_search {
+                padding: 5px 0;
+            }
+            #toolbar .widget_search .search-form {
+                border: none;
+            }
+            #pgc-w58292b77794b7-0-1 .thim-widget-icon-box .wrapper-box-icon.contact_info a {
+                word-wrap: break-word;
+            }
+            .thim-have-any-question {
+                display: none;
+            }
+            #toolbar .widget_search .search-form label .search-fields {
+                left: 0;
+            }
+            #toolbar .widget_search .search-form:after {
+                left: 155px;
+            }
+        }
+        
+        @media (max-width:768px) {
+            footer#colophon .footer .widget-title {
+                width: 111px;
+                word-wrap: break-word;
+            }
+            .list_map_right {
+                width: 100%;
+            }
+            .content-area>.row>.container {
+                padding-left: 36px;
+            }
+            .mapper {
+                float: inherit;
+                margin: 0 auto;
+            }
+            .list_map_right {
+                width: 500px;
+                margin-left: 125px;
+            }
+        }
+        
+        @media (max-width:767px) {
+            footer#colophon .footer .widget-title {
+                width: auto;
+                word-wrap: break-word;
+            }
+            .mapper {
+                display: none;
+            }
+            .list_map_right {
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+            }
+            .list_region {
+                width: 180px;
+                height: 450px;
+                margin: 0 auto;
+                float: initial;
+            }
+            .list_city {
+                width: 273px;
+                height: 450px;
+                margin: 0 auto;
+                float: initial;
+            }
+            .city_top {
+                width: 100%;
+            }
+            .city_text {
+                width: 280px;
+                height: 340px;
+                background: #fff;
+                padding: 8px 10px;
+                color: #222;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+        }
+        
+        @media (max-width:414px) {
+            footer#colophon .copyright-area .text-copyright {
+                width: 325px;
+                word-wrap: break-word;
+            }
+        }
+        
+        @media (max-width:375px) {
+            footer#colophon .copyright-area .text-copyright {
+                width: 325px;
+                word-wrap: break-word;
+            }
+        }
+        
+        @media (max-width:320px) {
+            footer#colophon .copyright-area .text-copyright {
+                width: 280px;
+                word-wrap: break-word;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="bp-legacy archive post-type-archive post-type-archive-product woocommerce woocommerce-page group-blog bg-boxed-image js woof_search_is_going course-scroll-remove" id="thim-body">
+    <div class="mfp-bg my-mfp-zoom-in mfp-ready"></div>
+    <div class="mfp-wrap mfp-close-btn-in mfp-auto-cursor my-mfp-zoom-in mfp-ready" tabindex="-1" style="overflow-x: hidden; overflow-y: auto;">
+        <div class="mfp-container mfp-s-ready mfp-inline-holder">
+            <div class="mfp-content">
+                <div id="content" class="quickview woocommerce">
+                    <div itemscope="" itemtype="http://schema.org/Product" id="product-1693" class="product-info">
+                        <script type="text/javascript">
+                            jQuery(document).ready(function() {
+                                jQuery('#slider').flexslider({
+                                    animation: "slide",
+                                    controlNav: false,
+                                    animationLoop: false,
+                                    slideshow: false,
+                                    directionNav: true,
+                                    prevText: "",
+                                    start: function(slider) {
+                                        jQuery('body').removeClass('loading');
+                                    }
+                                });
+
+                            });
+
+                        </script>
+                        <div class="left col-sm-6">
+                            <div id="slider" class="flexslider">
+                                <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                    <ul class="slides" style="width: 600%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                                        <li class="flex-active-slide" style="width: 405px; float: left; display: block;"><img width="600" height="600" src="https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus.jpg" class="attachment-shop_single size-shop_single wp-post-image" alt="" srcset="https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus.jpg 600w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-150x150.jpg 150w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-300x300.jpg 300w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-180x180.jpg 180w" sizes="(max-width: 600px) 100vw, 600px" draggable="false"></li>
+                                        <li style="width: 405px; float: left; display: block;"><img width="600" height="600" src="https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-2.jpg" class="attachment-shop_single size-shop_single" alt="" srcset="https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-2.jpg 600w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-2-150x150.jpg 150w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-2-300x300.jpg 300w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-2-180x180.jpg 180w" sizes="(max-width: 600px) 100vw, 600px" draggable="false"></li>
+                                        <li style="width: 405px; float: left; display: block;"><img width="600" height="600" src="https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-3.jpg" class="attachment-shop_single size-shop_single" alt="" srcset="https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-3.jpg 600w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-3-150x150.jpg 150w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-3-300x300.jpg 300w, https://educationwp.thimpress.com/demo-university-2/wp-content/uploads/sites/23/2013/06/Brauhaus-3-180x180.jpg 180w" sizes="(max-width: 600px) 100vw, 600px" draggable="false"></li>
+                                    </ul>
+                                </div>
+                                <ul class="flex-direction-nav">
+                                    <li>
+                                        <a class="flex-prev flex-disabled" href="#" tabindex="-1"></a>
+                                    </li>
+                                    <li><a class="flex-next" href="#">Next</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right col-sm-6">
+                            <h1 class="product_title entry-title">Brauhaus</h1>
+                            <div class="product_meta">
+
+
+
+                                <span class="posted_in"><a href="#" rel="tag">Location 985 211 degree</a></span>
+
+
+                            </div>
+                            <form class="cart" method="post" enctype="multipart/form-data">
+                                <!--                                <button type="submit" name="read-more" value="1693" class="single_add_to_cart_button button alt">Read More</button>-->
+                                <i class="fa fa-heart-o active" aria-hidden="true"></i>
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </form>
+
+
+                            <div itemprop="description" class="description">
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            </div>
+                            <ul class="thim-social-share">
+                                <li class="heading">Share:</li>
+                                <li>
+                                    <div class="facebook-social"><a target="_blank" class="facebook" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></div>
+                                </li>
+                                <li>
+                                    <div class="googleplus-social"><a target="_blank" class="googleplus" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></div>
+                                </li>
+                                <li>
+                                    <div class="twitter-social"><a target="_blank" class="twitter" href="#" title="weixin"><i class="fa fa-weixin"></i></a></div>
+                                </li>
+                                <li>
+                                    <div class="pinterest-social"><a target="_blank" class="pinterest" href="#" title="envelope"><i class="fa fa-envelope"></i></a></div>
+                                </li>
+                                <li>
+                                    <div class="facebook-social"><a target="_blank" class="facebook" href="#" title="phone"><i class="fa fa-phone"></i></a></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <a href="universities-detail.html" target="_top" class="quick-view-detail">View Detail</a>
+                        <div class="clear"></div>
+                    </div>
+                    <button title="Close (Esc)" type="button" class="mfp-close">×</button></div>
+            </div>
+            <div class="mfp-preloader">Loading...</div>
+        </div>
+    </div>
+    <div id="wrapper-container" class="wrapper-container">
+        <div class="content-pusher">
+            <header id="masthead" class="site-header affix-top bg-custom-sticky sticky-header header_overlay header_v1">
+                <div id="toolbar" class="toolbar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="toolbar-container">
+                                    <aside id="text-2" class="widget widget_text">
+                                        <div class="textwidget">
+                                            <div class="thim-have-any-question"> Have any question?
+                                                <div class="mobile"><i class="fa fa-phone"></i><a href="tel:0086 025 58745604" class="value">+ 0086 025 58745604 </a></div>
+                                                <div class="email"><i class="fa fa-envelope"></i><a href="mailto:info@scholarshipchina.com">info@scholarshipchina.com</a></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                    <aside id="search-4" class="widget widget_search">
+                                        <form role="search" method="get" class="search-form" action="https://educationwp.thimpress.com/demo-kindergarten/">
+                                            <label> 
+                                                <span class="screen-reader-text">Search for:</span> 
+                                                <input type="search" class="search-fields" placeholder="Search …" value="" name="s">
+                                            </label>
+                                            <input type="submit" class="search-submit" value="Search">
+                                        </form>
+                                    </aside>
+                                    <aside id="login-popup-3" class="widget widget_login-popup">
+                                        <div class="thim-widget-login-popup thim-widget-login-popup-base">
+                                            <div class="thim-link-login thim-login-popup"> <a class="register" href="#">Register</a> <a class="login" href="#">Login</a></div>
+                                            <div id="thim-popup-login" class="has-shortcode">
+                                                <div class="thim-login-container">
+                                                    <a href='#' style='display:none;'></a>
+                                                    <a href='#' style='display:none;'></a>
+                                                    <a href='#' style='display:none;'></a>
+                                                    <a href='#' style='display:none;'></a>
+                                                    <div class='mo-openid-app-icons'>
+                                                        <p style='color:#000000'> Login with social networks</p>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-facebook btn-custom-dec login-button' onClick='moOpenIdLogin("facebook");'> <i style='padding-top:5px !important' class='fa fa-facebook'></i> Facebook</a>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-google btn-custom-dec login-button' onClick='moOpenIdLogin("google");'> <i style='padding-top:5px !important' class='fa fa-google-plus'></i> Google</a>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-twitter btn-custom-dec login-button' onClick='moOpenIdLogin("twitter");'> <i style='padding-top:5px !important' class='fa fa-twitter'></i> Twitter</a>
+                                                        <a style='width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;' class='btn btn-block btn-social btn-linkedin btn-custom-dec login-button' onClick='moOpenIdLogin("linkedin");'> <i style='padding-top:5px !important' class='fa fa-linkedin'></i> LinkedIn</a>
+                                                    </div> <br>
+                                                    <div class="thim-login">
+                                                        <h2 class="title">Login with your site account</h2>
+                                                        <form name="loginform" id="loginform" action="#" method="post">
+                                                            <p class="login-username"> <input type="text" name="user_login" placeholder="Username or email" id="thim_login" class="input" value="" size="20" /></p>
+                                                            <p class="login-password"> <input type="password" name="user_password" placeholder="Password" id="thim_pass" class="input" value="" size="20" /></p> <a class="lost-pass-link" href="#" title="Lost Password">Lost your password?</a>
+                                                            <p class="forgetmenot login-remember"> <label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me </label></p>
+                                                            <p class="submit login-submit"> <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Login" /> <input type="hidden" name="redirect_to" value="#" /> <input type="hidden" name="testcookie" value="1" /></p>
+                                                        </form>
+                                                        <p class="link-bottom">Not a member yet? <a class="register" href="#">Register now</a></p>
+                                                    </div> <span class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></span></div>
+                                            </div>
+                                        </div>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="navigation col-sm-12">
+                            <div class="tm-table">
+                                <div class="width-logo table-cell sm-logo">
+                                    <a href="default.html" title="ScholarshipChina" rel="home" class="no-sticky-logo"><img src="picture/logo.png" alt="ScholarshipChina"></a>
+                                    <a href="default.html" rel="home" class="sticky-logo"><img src="picture/logo-sticky.png" alt="ScholarshipChina"></a>
+                                </div>
+                                <nav class="width-navigation table-cell table-right">
+                                    <ul class="nav navbar-nav menu-main-menu">
+                                        <li id="menu-item-4527" class=""><a href="universities.html" class="tc-menu-inner">UNIVERSITIES </a>
+                                            <div class="desc">Browse 600+ Chinese universities</div>
+                                        </li>
+                                        <li id="menu-item-4528" class=""><a href="scholarships.html" class="tc-menu-inner">SCHOLARSHIPS</a>
+                                            <div class="desc">100% success rate to get the scholarship</div>
+                                        </li>
+                                        <li id="menu-item-127" class=""><a href="city-life.html" class="tc-menu-inner">CITY & LIFE</a>
+                                            <div class="desc">100+ cities to better understand Chinese life</div>
+                                        </li>
+                                        <li id="menu-item-99" class=""><a href="guidence.html" class="tc-menu-inner">GUIDANCE</a>
+                                            <div class="desc">Detailed application guidance for all freshmen</div>
+                                        </li>
+                                        <li class="">
+                                            <div id="panel-w58fef074d40db-0-4-0" class="so-panel widget widget_button panel-first-child panel-last-child" data-index="4">
+                                                <div class="thim-widget-button thim-widget-button-base"><a class="widget-button tiny-rounded no-border small custom_style position-after" href="#" style="font-size: 13px;font-weight: 500;color: #ffffff;border-color: #fa394a;background-color: #fa394a;" data-hover="font-size: 13px;font-weight: 500;color: #fed1d4;border-color: #fa394a;background-color: #fa394a;">APPLY NOW<i class="fa fa-pencil" style="font-size: 14px;"></i> </a></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="widget-listingsearch" style="">
+                                    <div class="widget-content">
+                                        <form class="job_search_form  js-search-form" action="" method="get" role="search">
+                                            <div class="search_jobs clearfix visible-table search_jobs--frontpage">
+                                                <div class="inner-left" style="">
+                                                    <div class="visible-table table-wrapper" style="position: relative;">
+                                                        <div class="search-field-wrapper  search-filter-wrapper has-suggestion" style="width: 100%; position: absolute;top: 0;left: 0">
+                                                            <input class="search-field" autocomplete="off" type="text" name="search_keywords" id="search_keywords" placeholder="search" value="" style="border: none;width: 100%;height: 40px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="submit" style="float: right">
+                                                    <button class="search-submit" name="submit" style="border-radius: 100px;-webkit-border-radius: 100px;-moz-border-radius: 100px;-ms-border-radius: 100px;-o-border-radius: 100px;color: #fff;cursor: pointer;padding: 5px 15px;">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="menu-mobile-effect navbar-toggle" data-effect="mobile-effect"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <nav class="mobile-menu-container mobile-effect">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="universities.html" class="tc-menu-inner">UNIVERSITIES</a></li>
+                    <li class=""><a href="scholarships.html" class="tc-menu-inner">SCHOLARSHIPS</a></li>
+                    <li class=""><a href="city-life.html" class="tc-menu-inner">CITY & LIFE</a></li>
+                    <li class=""><a href="guidence.html" class="tc-menu-inner">GUIDANCE</a></li>
+                </ul>
+            </nav>
+            <div id="main-content">
+                <section class="content-area">
+                    <div class="top_site_main" style="color: #ffffff;background-image:url(images/bg-page_6.jpg);"> <span class="overlay-top-header" style="background:rgba(0,0,0,0.5);"></span>
+                        <div class="page-title-wrapper">
+                            <div class="banner-wrapper container">
+                                <h1>Universities</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breadcrumbs-wrapper">
+                        <div class="container">
+                            <ul class="breadcrumbs" id="breadcrumbs" itemtype="http://schema.org/BreadcrumbList" itemscope="" itemprop="breadcrumb">
+                                <li itemtype="http://schema.org/ListItem" itemscope="" itemprop="itemListElement"><a href="default.html">Home</a></li>
+                                <li itemtype="http://schema.org/ListItem" itemscope="" itemprop="itemListElement">Universities</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container">
+                            <div id="pg-12-2" class="panel-grid panel-no-style">
+                                <div id="pgc-12-2-0" class="panel-grid-cell">
+                                    <div id="panel-12-2-0-0" class="so-panel widget widget_heading panel-first-child" data-index="4">
+                                        <div class="thim-widget-heading thim-widget-heading-base">
+                                            <div class="sc_heading text-left">
+                                                <h3 class="title">SELECT BY LOCATION</h3>
+                                                <p class="sub-heading" style="">A map to help you where to study in China</p><span class="line"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city_list">
+                        <div>
+                            <div class="list_map">
+                                <div class="mapper">
+                                    <img src="images/map_ciss.png" width="497" height="418" usemap="#Map" class="mapper noborder iradius16 iopacity50 icolorff0000" border="0" />
+                                    <map name="Map" id="Map">
+                                        <area shape="poly" href="#collapseThree" prolist="3,11,12,13,14,16" onclick="javascript:scroller('EASTERN CHINA', 1000);" id="HD" class="noborder icolordb0705" coords="385,272,373,265,371,257,364,252,369,242,363,239,358,236,363,228,367,222,372,222,370,215,375,211,376,209,381,218,388,217,395,213,401,208,421,238,413,243,415,244,421,244,423,249,417,252,417,256,419,258,427,255,430,256,430,261,428,265,428,275,424,280,420,283,421,291,417,299,410,308,409,316,409,321,401,325,396,332,391,334,385,328,379,325,378,315,380,304,379,300,386,295,387,286,394,282,395,276,389,269,384,271" target="_self" alt="华东地区" title="华东地区"></area>
+                                        <area shape="poly" href="#collapseseven" prolist="21,28,27,31,32" onclick="javascript:scroller('NORTHWEST REGION', 1000);" id="XB" class="noborder icolordb0705" coords="39,202,29,193,28,186,25,180,18,177,14,163,8,162,4,161,15,151,17,146,10,144,2,137,5,131,17,123,26,123,30,128,42,124,52,121,65,121,72,114,75,108,76,99,76,86,82,83,94,86,98,73,105,68,115,72,123,71,124,62,131,58,138,53,142,50,147,53,146,60,150,68,158,73,161,81,158,95,159,104,164,106,173,104,180,107,186,114,193,119,199,128,209,133,212,135,210,151,217,157,227,151,231,160,233,168,238,174,240,177,248,168,261,171,264,178,257,187,264,188,273,184,273,178,276,168,285,168,285,177,290,180,295,186,302,178,310,168,319,164,322,172,320,189,316,198,315,203,318,210,317,222,323,229,322,233,315,236,312,242,316,250,315,252,303,249,293,245,281,242,274,240,265,240,261,236,258,229,249,224,243,226,246,235,237,235,236,235,234,241,219,241,212,229,205,224,198,226,199,235,199,245,196,250,192,244,189,250,186,249,176,242,170,235,156,236,149,228,141,228,131,222,132,208,134,198,133,190,128,186,121,186,116,188,107,189,99,194,88,196,77,195,68,192,62,191,54,189,48,195,39,198" title="西北地区"></area>
+                                        <area shape="poly" href="#collapseSix" prolist="8,9,10" onclick="javascript:scroller('NORTHEAST CHINA REGION', 1000);" id="DB" class="noborder icolordb0705" coords="410,167,435,147,444,136,447,131,448,128,452,129,458,132,459,125,463,118,472,112,475,115,479,107,476,94,473,87,473,82,476,79,481,80,484,82,488,77,486,66,484,59,484,50,484,43,476,43,470,46,466,54,459,53,451,45,442,39,431,39,425,35,422,27,417,23,408,15,398,9,387,9,381,13,381,25,386,23,390,27,395,31,400,32,406,27,413,28,414,34,415,42,416,50,415,58,411,63,405,64,403,68,403,74,406,79,411,83,410,88,407,90,402,90,404,96,406,103,410,103,415,107,415,112,418,117,418,122,412,121,409,119,407,125,401,128,399,132,389,133,389,133,390,138,387,143,385,146,391,151,394,153,399,151,404,147,407,144,411,147,410,150,409,154,408,158,410,165,408,161" title="东北地区"></area>
+                                        <area shape="poly" href="#collapseeight" prolist="4,22,24,26,30" onclick="javascript:scroller('SOUTHWEST REGION', 1000);" id="XN" class="noborder icolordb0705" coords="28,218,29,230,34,239,40,243,44,250,45,253,47,248,51,246,56,252,68,264,75,270,81,277,88,279,95,281,100,284,105,282,111,281,109,288,112,292,117,291,121,289,120,284,130,285,137,288,142,292,144,297,149,300,155,299,161,295,168,293,173,289,176,285,180,285,186,291,192,293,197,291,202,294,207,296,208,302,205,309,201,315,197,321,197,329,201,333,206,333,207,338,210,343,211,349,212,354,217,359,223,361,228,364,235,368,239,367,237,358,237,352,241,352,246,353,254,350,261,351,268,349,275,345,281,346,279,335,269,331,269,327,276,327,280,328,285,321,293,323,298,325,304,321,310,317,315,313,314,305,312,299,314,294,313,274,310,269,317,261,319,257,316,252,297,247,288,243,279,241,264,240,260,232,254,226,247,225,244,229,246,234,238,235,234,241,221,241,213,231,208,226,202,226,198,227,200,241,198,247,192,245,188,249,179,244,171,236,159,236,152,232,146,229,140,231,136,227,131,219,130,209,131,200,132,193,129,187,122,186,115,188,104,191,89,196,78,195,66,192,57,190,51,191,45,196,40,198,34,203,33,206,37,212,35,215,29,216" title="西南地区"></area>
+                                        <area shape="poly" href="#collapseFive" prolist="20,25,29" onclick="javascript:scroller('SOUTH CHINA', 1000);" id="HN" class="noborder icolordb0705" coords="323,372,327,368,329,364,337,361,345,359,352,357,355,351,361,348,372,347,381,346,387,342,389,337,384,329,375,326,367,324,363,323,363,317,356,317,350,317,346,317,343,321,339,323,335,327,331,323,330,316,330,309,328,307,323,309,318,313,313,316,308,319,303,322,298,325,292,324,287,322,283,325,280,329,271,329,275,333,280,339,283,345,286,351,292,357,298,362,302,364,307,362,313,361,316,360,316,366,318,370,322,371" title="华南地区"></area>
+                                        <area shape="poly" href="#collapseTwo" prolist="15,18,19,17" onclick="javascript:scroller('CENTRAL CHINA', 1000);" id="HZ" class="noborder icolordb0705" coords="354,212,348,218,341,221,335,225,326,229,323,232,317,236,313,242,313,247,318,255,318,261,312,267,313,274,313,281,314,287,314,295,314,301,315,309,317,313,325,308,329,308,331,316,331,321,334,326,340,322,345,318,354,317,362,318,364,324,372,324,378,325,378,317,380,310,380,304,384,297,387,291,389,286,395,281,396,275,390,270,385,268,382,271,376,267,372,262,369,257,364,252,366,247,367,242,361,239,358,235,361,229,365,224,371,221,368,219,361,216,355,213,353,212" title="华中地区"></area>
+                                        <area shape="poly" href="#collapseFour" prolist="1,2,5,6,33" onclick="javascript:scroller('NORTH CHINA', 1000);" id="HB" class="noborder icolordb0705" coords="212,135,230,136,239,139,247,144,256,147,264,144,272,146,282,140,288,137,299,137,308,135,316,130,322,125,322,116,326,110,337,110,342,109,345,102,351,98,355,97,359,91,368,86,376,83,382,82,377,76,371,72,361,73,351,74,349,65,351,58,356,55,365,52,368,44,369,35,372,29,373,23,370,18,373,14,379,11,382,13,382,21,382,24,388,21,390,27,393,31,398,31,403,29,410,27,414,33,414,41,415,49,415,57,412,63,405,64,403,70,404,77,408,82,410,86,408,90,403,91,404,98,406,104,411,105,415,111,416,116,418,121,409,120,407,125,403,127,400,130,396,133,389,134,389,139,385,146,390,151,394,153,394,157,391,161,386,165,380,167,381,174,385,177,390,179,393,184,399,179,405,177,414,178,420,177,423,180,419,185,414,189,409,194,405,200,401,207,397,211,390,215,386,217,378,215,376,209,372,214,371,219,366,219,357,213,355,210,351,215,345,219,338,223,328,227,323,229,320,225,318,213,316,205,317,195,320,186,321,175,320,168,318,165,312,167,308,170,305,175,301,180,298,183,296,185,291,181,287,177,285,171,285,168,279,168,275,173,274,178,273,182,271,184,265,188,259,188,258,185,262,180,262,174,258,170,253,168,249,169,246,170,243,173,240,176,236,173,232,168,231,161,228,154,225,152,220,156,215,155,211,151,211,143,211,136" title="华北地区"></area>
+
+                                    </map>
+                                </div>
+                                <div class="list_map_right">
+                                    <div class="list_region" style="display: block;">
+                                        <div class="Region" style="border: 2px solid rgb(255, 255, 255); background: rgb(250,57,74);">
+                                            <a data-toggle="collapse" class="posmap" rel="HZ" prolist="15,18,19,17" data-parent="#accordion" href="#collapseTwo">Central China</a>
+                                        </div>
+                                        <div class="Region" style="background: rgb(179,179,179); border: 2px solid rgb(255, 255, 255);">
+                                            <a data-toggle="collapse" class="posmap" rel="HD" prolist="3,11,12,13,14,16" data-parent="#accordion" href="#collapseThree">Eastern China</a>
+                                        </div>
+                                        <div class="Region" style="background: rgb(179,179,179); border: 2px solid rgb(255, 255, 255);">
+                                            <a data-toggle="collapse" class="posmap" rel="HB" prolist="1,2,5,6,33" data-parent="#accordion" href="#collapseFour">North China</a>
+                                        </div>
+                                        <div class="Region" style="background: rgb(179,179,179); border: 2px solid rgb(255, 255, 255);">
+                                            <a data-toggle="collapse" class="posmap" rel="HN" prolist="20,25,29" data-parent="#accordion" href="#collapseFive">South China</a>
+                                        </div>
+                                        <div class="Region" style="background: rgb(179,179,179); border: 2px solid rgb(255, 255, 255);">
+                                            <a data-toggle="collapse" class="posmap" rel="DB" prolist="8,9,10" data-parent="#accordion" href="#collapseSix">Northeast Region</a>
+                                        </div>
+                                        <div class="Region" style="background: rgb(179,179,179); border: 2px solid rgb(255, 255, 255);">
+                                            <a data-toggle="collapse" class="posmap" rel="XB" prolist="21,28,27,31,32" data-parent="#accordion" href="#collapseseven">Northwest Region</a>
+                                        </div>
+                                        <div class="Region" style="background: rgb(179,179,179); border: 2px solid rgb(255, 255, 255);">
+                                            <a data-toggle="collapse" class="posmap" rel="XN" prolist="4,22,24,26,30" data-parent="#accordion" href="#collapseeight">Southwest Region</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="list_city" list="HZ" style="display: block;">
+                                        <div class="city_top">
+                                            <a href="javascript:void(0)">Hubei</a>
+                                            <a href="javascript:void(0)">Hunan </a>
+                                            <a href="javascript:void(0)">Henan</a>
+                                        </div>
+                                        <div class="city_text">
+                                            <ul>
+                                                <li><a href="#">Hubei University Of Technology</a></li>
+                                                <li><a href="#">Hubei Normal University</a></li>
+                                                <li><a href="#">Hunan University</a></li>
+                                                <li><a href="#">Central China Normal Universit...</a></li>
+                                                <li><a href="#">China University of Geoscience...</a></li>
+                                                <li><a href="#">Zhengzhou University</a></li>
+                                                <li><a href="#">Huazhong University of Science...</a></li>
+                                                <li><a href="#">Wuhan University</a></li>
+                                                <li><a href="#">Jianghan University</a></li>
+                                                <li><a href="#">Shaoyang University </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="list_city" style="display: none;" list="HD">
+                                        <div class="city_top">
+                                            <a href="javascript:void(0)">Zhejiang</a>
+                                            <a href="javascript:void(0)">Anhui </a>
+                                            <a href="javascript:void(0)">Shanghai</a>
+                                        </div>
+                                        <div class="city_text">
+                                            <ul>
+                                                <li><a href="#">Xiamen University</a></li>
+                                                <li><a href="#">Ningbo University</a></li>
+                                                <li><a href="#">Anhui Medical University</a></li>
+                                                <li><a href="#">Jiangsu University</a></li>
+                                                <li><a href="#">China Pharmaceutical Universit...</a></li>
+                                                <li><a href="#">Hanzhou Dianzi University</a></li>
+                                                <li><a href="#">Shanghai University of Traditi...</a></li>
+                                                <li><a href="#">Ocean University of China</a></li>
+                                                <li><a href="#">Nanjing University</a></li>
+                                                <li><a href="#">Shanghai University</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list_city" style="display: none;" list="HB">
+                                        <div class="city_top">
+                                            <a href="javascript:void(0)">Beijin</a>
+                                            <a href="javascript:void(0)">Tianjing </a>
+                                            <a href="javascript:void(0)">Hebei</a>
+                                        </div>
+                                        <div class="city_text">
+                                            <ul>
+                                                <li><a href="#">University of Science &amp; Techno...</a></li>
+                                                <li><a href="#">Capital University of Economic...</a></li>
+                                                <li><a href="#">University of International Bu...</a></li>
+                                                <li><a href="#">North China University of Tech...</a></li>
+                                                <li><a href="#">Beijing Institute of Technolog...</a></li>
+                                                <li><a href="#">Beijing Foreign Studies Univer...</a></li>
+                                                <li><a href="#">Beijing Language and Culture U...</a></li>
+                                                <li><a href="#">Tianjin university</a></li>
+                                                <li><a href="#">Beijing Information Science an...</a></li>
+                                                <li><a href="#">Beijing Jiaotong University</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list_city" style="display: none;" list="HN">
+                                        <div class="city_top">
+                                            <a href="javascript:void(0)">Guangdong</a>
+                                            <a href="javascript:void(0)">Hainan </a>
+                                            <a href="javascript:void(0)">Guangxi</a>
+                                        </div>
+                                        <div class="city_text">
+                                            <ul>
+                                                <li><a href="#">Sun Yat-sen University</a></li>
+                                                <li><a href="#">Guilin University of Technolog...</a></li>
+                                                <li><a href="#">Guangxi University</a></li>
+                                                <li><a href="#">Beijing Normal University Zhuh...</a></li>
+                                                <li><a href="#">Guangdong Ocean University</a></li>
+                                                <li><a href="#">Guangdong Polytechnic Normal U...</a></li>
+                                                <li><a href="#">Guangdong Pharmaceutical Unive...</a></li>
+                                                <li><a href="#">Guangdong University Of Foreig...</a></li>
+                                                <li><a href="#">Guangxi University of Finance ...</a></li>
+                                                <li><a href="#">Guangxi Technical College</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list_city" style="display: none;" list="DB">
+                                        <div class="city_top">
+                                            <a href="javascript:void(0)">Laonin</a>
+                                            <a href="javascript:void(0)">Jiln </a>
+                                            <a href="javascript:void(0)">HeilongJiang</a>
+                                        </div>
+                                        <div class="city_text">
+                                            <ul>
+                                                <li><a href="#">Bohai University</a></li>
+                                                <li><a href="#">Harbin Institute of Technology</a></li>
+                                                <li><a href="#">Heilongjiang University</a></li>
+                                                <li><a href="#">Liaoning University</a></li>
+                                                <li><a href="#">Yanbian University</a></li>
+                                                <li><a href="#">Harbin Engineering University</a></li>
+                                                <li><a href="#">Beihua University (Jilin Medic...</a></li>
+                                                <li><a href="#">Jinzhou Medical University</a></li>
+                                                <li><a href="#">Jiamusi University</a></li>
+                                                <li><a href="#">Heilongjiang University of Chi...</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list_city" style="display: none;" list="XB">
+                                        <div class="city_top">
+                                            <a href="javascript:void(0)">Gansu</a>
+                                            <a href="javascript:void(0)">Shanxi </a>
+                                            <a href="javascript:void(0)">Qinhai</a>
+                                        </div>
+                                        <div class="city_text">
+                                            <ul>
+                                                <li><a href="#">Xidian University</a></li>
+                                                <li><a href="#">Northwestern Polytechnical Uni...</a></li>
+                                                <li><a href="#">Xi‘an Shiyou University</a></li>
+                                                <li><a href="#">Lanzhou Jiaotong University</a></li>
+                                                <li><a href="#">Xi‘an Jiaotong University</a></li>
+                                                <li><a href="#">Xinjiang University</a></li>
+                                                <li><a href="#">Lanzhou University</a></li>
+                                                <li><a href="#">Shaanxi Normal University</a></li>
+                                                <li><a href="#">Xi'an International Studies Un...</a></li>
+                                                <li><a href="#">Xinjiang Medical University</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list_city" style="display: none;" list="XN">
+                                        <div class="city_top">
+                                            <a href="javascript:void(0)">Chongqing</a>
+                                            <a href="javascript:void(0)">Sichuan </a>
+                                            <a href="javascript:void(0)">Guizhou</a>
+                                        </div>
+                                        <div class="city_text">
+                                            <ul>
+                                                <li><a href="#">Southwestern University of Fin...</a></li>
+                                                <li><a href="#">Baoshan University</a></li>
+                                                <li><a href="#">Chengdu Sport University</a></li>
+                                                <li><a href="#">Chengdu University of Informat...</a></li>
+                                                <li><a href="#">Chendu University</a></li>
+                                                <li><a href="#">Chengdu University</a></li>
+                                                <li><a href="#">Chuxiong Normal University</a></li>
+                                                <li><a href="#">North Sichuan Medical College</a></li>
+                                                <li><a href="#">Dali University</a></li>
+                                                <li><a href="#">University of Electronic Scien...</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container site-content sidebar-right">
+                        <div class="row">
+                            <main id="main" class="site-main col-sm-9 alignleft">
+                                <div id="container">
+                                    <div id="content" role="main">
+                                        <div id="thim-product-archive" class="thim-product-list">
+                                            <div class="woocommerce woocommerce-page woof_shortcode_output">
+                                                <div id="woof_results_by_ajax" data-shortcode="woof_products is_ajax=1">
+                                                    <div class="thim-product-switch-wrap switch-layout-container">
+                                                        <div class="thim-product-switch-layout switch-layout"> <a href="javascript:;" class="list switchToGrid"><i class="fa fa-th-large"></i></a> <a href="javascript:;" class="grid switchToList"><i class="fa fa-th-list"></i></a></div>
+                                                        <p class="woocommerce-result-count"> Showing 1&ndash;9 of 10 results</p>
+                                                        <form class="woocommerce-ordering" method="get">
+                                                            <select name="orderby" class="orderby">
+                                                                <option value=""  selected='selected'>SCHOOL CATEGORY</option>
+                                                                <option value="985" >985</option>
+                                                                <option value="211" >211</option>
+                                                                <option value="All" >All</option>
+                                                            </select>
+                                                            <input type="hidden" name="swoof" value="1" />
+                                                            <input type="hidden" name="min_price" value="16" />
+                                                            <input type="hidden" name="max_price" value="36" />
+                                                        </form>
+                                                    </div>
+                                                    <ul class="product-grid row">
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-1693 product type-product status-publish has-post-thumbnail product_cat-culinary  instock shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb">
+                                                                        <img width="300" height="300" src="picture/ahgy.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="1693"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#"></a>
+                                                                    </div>
+                                                                    <div class="product__title">
+                                                                        <a href="universities-detail.html" class="title">Nanchang University 
+</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div>
+                                                                        <span class="price">
+                                                                         <span class="woocommerce-Price-amount amount">
+                                                                         <span class="woocommerce-Price-currencySymbol"></span>Nanchang</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-1691 product type-product status-publish has-post-thumbnail product_cat-postcard last instock shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <img width="300" height="300" src="picture/bjlg.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="1691"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#" class="link-images-product"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">Dalian Polytechnic University
+</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>Dalian
+                                                                        </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-1694 product type-product status-publish has-post-thumbnail product_cat-culinary  instock shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <img width="300" height="300" src="picture/dlgy.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="1694"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">Sichuan University Of Arts and Science
+</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>Dazhou
+                                                                        </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-1690 product type-product status-publish has-post-thumbnail product_cat-cookware last instock sale shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <span class="onsale">Sale!</span> <img width="300" height="300" src="picture/hzsf.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="1690"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">zhejiang university of fiance and economics
+</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>hangzhou
+                                                                        </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-139 product type-product status-publish has-post-thumbnail product_cat-cookware  instock shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <img width="300" height="300" src="picture/nxd.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="139"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#" class="link-images-product"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">Shaoxing University
+</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>Shaoxing
+                                                                        </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-1696 product type-product status-publish has-post-thumbnail product_cat-cookware last instock sale shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <span class="onsale">Sale!</span> <img width="300" height="300" src="picture/shfzx.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="1696"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#" class="link-images-product"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">Shanghai University</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>Shanghai</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-137 product type-product status-publish has-post-thumbnail product_cat-accessories  instock shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <img width="300" height="300" src="picture/xajt.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="137"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#" class="link-images-product"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">Nanjing Nornal University</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>Nanjing</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-1695 product type-product status-publish has-post-thumbnail product_cat-culinary last instock shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <img width="300" height="300" src="picture/xzykd.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="1695"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="https://educationwp.thimpress.com/demo-university-2/product/fursten-hutchen/" class="link-images-product"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">Nanjing Nornal University</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>Nanjing</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-md-4 col-sm-6 col-xs-6 post-135 product type-product status-publish has-post-thumbnail product_cat-postcard  instock shipping-taxable purchasable product-type-simple">
+                                                            <div class="content__product">
+                                                                <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                    <div class="product_thumb"> <img width="300" height="300" src="picture/zgyk.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" sizes="(max-width: 300px) 100vw, 300px" />
+                                                                        <div class="quick-view" data-prod="135"><a href="javascript:;"><i class="fa fa-search fa-fw"></i></a></div>
+                                                                        <a href="#" class="link-images-product"></a>
+                                                                    </div>
+                                                                    <div class="product__title"> <a href="universities-detail.html" class="title">Nanjing Nornal University</a>
+                                                                        <div class="description">
+                                                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet&#8230;</p>
+                                                                        </div> <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>Nanjing</span>
+                                                                        </span>
+                                                                        <!--                                                                        <a rel="nofollow" href="universities-detail.html" data-quantity="1" data-product_id="135" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Read More</a>-->
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <nav class="pagination loop-pagination pagination-center">
+                                                        <ul class='page-numbers'>
+                                                            <li><a class="prev page-numbers" href="#">Prev</a></li>
+                                                            <li><span class='page-numbers current'>1</span></li>
+                                                            <li><a class='page-numbers' href='#'>2</a></li>
+                                                            <li><a class="next page-numbers" href="#">Next</a></li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+                            <div id="sidebar" class="widget-area col-sm-3 sticky-sidebar" role="complementary">
+                                <aside id="woof_widget-2" class="widget WOOF_Widget" style="margin-bottom: 0;">
+                                    <div class="widget widget-woof">
+                                        <div class="woof woof_sid woof_sid_widget" data-sid="widget" data-shortcode="woof sid='widget' start_filtering_btn='0' price_filter='3' redirect='' ajax_redraw='1' " data-redirect="" data-autosubmit="1" data-ajax-redraw="1"><a href="#" class="woof_edit_view" data-sid="widget">show blocks helper</a>
+                                            <div></div>
+                                            <div class="woof_redraw_zone" data-woof-ver="1.1.7">
+                                                <div data-css-class="woof_price3_search_container" class="woof_price3_search_container woof_container">
+                                                    <div class="woof_container_overlay_item"></div>
+                                                    <div class="woof_container_inner">
+                                                        <h4>Filter by TUITION fee</h4> <input class="woof_range_slider" id="5a17789a560ca" data-min="0" data-max="40" data-min-now="0" data-max-now="40" data-step="0" data-slider-prefix="" data-slider-postfix="k" value="" /></div>
+                                                </div>
+                                                <div data-css-class="woof_container_pa_color" class="woof_container woof_container_radio woof_container_pa_color woof_container_1 woof_container_productcolor">
+                                                    <div class="woof_container_overlay_item"></div>
+                                                    <div class="woof_container_inner woof_container_inner_productcolor">
+                                                        <h4>Fields</h4>
+                                                        <div class="woof_block_html_items">
+                                                            <ul class="woof_list woof_list_radio">
+                                                                <li class="woof_term_82 "> <input type="radio" id="woof_82_5a17789a56ae5" class="woof_radio_term woof_radio_term_82" data-slug="gray" data-term-id="82" name="pa_color" value="82" /><label class="woof_radio_label " for="woof_82_5a17789a56ae5">Medicine<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="82" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_82"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="black" data-anchor="woof_n_pa_color_black" /></li>
+                                                                <li class="woof_term_84 "> <input type="radio" id="woof_84_5a17789a5752d" class="woof_radio_term woof_radio_term_84" data-slug="gray" data-term-id="84" name="pa_color" value="84" /><label class="woof_radio_label " for="woof_84_5a17789a5752d">Business and Management<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="84" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_84"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="blue" data-anchor="woof_n_pa_color_blue" /></li>
+                                                                <li class="woof_term_79 "> <input type="radio" id="woof_79_5a17789a57e4f" class="woof_radio_term woof_radio_term_79" data-slug="gray" data-term-id="79" name="pa_color" value="79" /><label class="woof_radio_label " for="woof_79_5a17789a57e4f">Language and Culture<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="79" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_79"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="brown" data-anchor="woof_n_pa_color_brown" /></li>
+                                                                <li class="woof_term_78 "> <input type="radio" id="woof_78_5a17789a58775" class="woof_radio_term woof_radio_term_78" data-slug="gray" data-term-id="78" name="pa_color" value="78" /><label class="woof_radio_label " for="woof_78_5a17789a58775">Science<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="78" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_78"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="green" data-anchor="woof_n_pa_color_green" /></li>
+                                                                <li class="woof_term_86 "> <input type="radio" id="woof_86_5a17789a5945e" class="woof_radio_term woof_radio_term_86" data-slug="gray" data-term-id="86" name="pa_color" value="86" /><label class="woof_radio_label " for="woof_86_5a17789a5945e">Engineering<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="86" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_86"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="red" data-anchor="woof_n_pa_color_red" /></li>
+                                                                <li class="woof_term_81 "> <input type="radio" id="woof_81_5a17789a59e30" class="woof_radio_term woof_radio_term_81" data-slug="gray" data-term-id="81" name="pa_color" value="81" /><label class="woof_radio_label " for="woof_81_5a17789a59e30">Agricultural<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="81" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_81"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="yellow" data-anchor="woof_n_pa_color_yellow" /></li>
+                                                                <li class="woof_term_83"> <input type="radio" id="woof_83_5a17789a59e30" class="woof_radio_term woof_radio_term_83" data-slug="gray" data-term-id="83" name="pa_color" value="83" /><label class="woof_radio_label " for="woof_83_5a17789a59e30">Art<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="83" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_83"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="pink" data-anchor="woof_n_pa_color_yellow" /></li>
+                                                                <li class="woof_term_85 "> <input type="radio" id="woof_85_5a17789a59e30" class="woof_radio_term woof_radio_term_85" data-slug="gray" data-term-id="85" name="pa_color" value="85" /><label class="woof_radio_label " for="woof_85_5a17789a59e30">Education<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="85" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_85"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="cornflowerblue" data-anchor="woof_n_pa_color_yellow" /></li>
+                                                                <li class="woof_term_88 "> <input type="radio" id="woof_88_5a17789a59e30" class="woof_radio_term woof_radio_term_88" data-slug="gray" data-term-id="88" name="pa_color" value="88" /><label class="woof_radio_label " for="woof_88_5a17789a59e30">Law<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_color" data-term-id="88" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_87"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="darkorchid" data-anchor="woof_n_pa_color_yellow" /></li>
+                                                            </ul>
+                                                        </div> <input type="hidden" name="woof_t_pa_color" value="Product Color" /></div>
+                                                </div>
+                                                <div data-css-class="woof_container_pa_size" class="woof_container woof_container_radio woof_container_pa_size woof_container_2 woof_container_productsize">
+                                                    <div class="woof_container_overlay_item"></div>
+                                                    <div class="woof_container_inner woof_container_inner_productsize">
+                                                        <h4>Degree Level</h4>
+                                                        <div class="woof_block_html_items">
+                                                            <ul class="woof_list woof_list_radio">
+                                                                <li class="woof_term_83 "> <input type="radio" id="woof_83_5a17789a5ab12" class="woof_radio_term woof_radio_term_83" data-slug="985" data-term-id="83" name="pa_size" value="83" /><label class="woof_radio_label " for="woof_83_5a17789a5ab12">Non-Degree<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_size" data-term-id="83" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_83"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="big" data-anchor="woof_n_pa_size_big" /></li>
+                                                                <li class="woof_term_85 "> <input type="radio" id="woof_85_5a17789a5b51b" class="woof_radio_term woof_radio_term_85" data-slug="211" data-term-id="85" name="pa_size" value="85" /><label class="woof_radio_label " for="woof_85_5a17789a5b51b">Bachelor<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_size" data-term-id="85" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_85"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="medium" data-anchor="woof_n_pa_size_medium" /></li>
+                                                                <li class="woof_term_80 "> <input type="radio" id="woof_80_5a17789a5bf5b" class="woof_radio_term woof_radio_term_80" data-slug="all" data-term-id="80" name="pa_size" value="80" /><label class="woof_radio_label " for="woof_80_5a17789a5bf5b">Master<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_size" data-term-id="80" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_80"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="small" data-anchor="woof_n_pa_size_small" /></li>
+                                                                <li class="woof_term_87 "> <input type="radio" id="woof_87_5a17789a5bf5b" class="woof_radio_term woof_radio_term_87" data-slug="all" data-term-id="87" name="pa_size" value="87" /><label class="woof_radio_label " for="woof_87_5a17789a5bf5b">PHD<span class="woof_radio_count"></span></label>
+                                                                    <a href="#" data-name="pa_size" data-term-id="87" style="display: none;" class="woof_radio_term_reset   woof_radio_term_reset_87"><img src="picture/delete.png" height="12" width="12" alt="" /></a><input type="hidden" value="small" data-anchor="woof_n_pa_size_small" /></li>
+
+                                                            </ul>
+                                                        </div> <input type="hidden" name="woof_t_pa_size" value="Product Size" /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </aside>
+                                <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
+                                    <h4 class="widget-title">Scholarship category</h4>
+                                    <ul class="product-categories">
+                                        <li class="cat-item cat-item-19"><a href="#">CSC</a></li>
+                                        <li class="cat-item cat-item-20"><a href="#">ISSP</a></li>
+                                        <li class="cat-item cat-item-18"><a href="#">Other scholarships</a></li>
+                                    </ul>
+                                </aside>
+                                <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
+                                    <h4 class="widget-title">Intake</h4>
+                                    <ul class="product-categories">
+                                        <li class="cat-item cat-item-19"><a href="#">2017</a></li>
+                                        <li class="cat-item cat-item-20"><a href="#">March 2018</a></li>
+                                        <li class="cat-item cat-item-18"><a href="#">September 2018</a></li>
+                                    </ul>
+                                </aside>
+                                <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories" style="overflow: inherit;">
+                                    <h4 class="widget-title">CITY</h4>
+                                    <form method="get" action="/index.php?m=product&amp;a=index&amp;s=1">
+                                        <input type="hidden" value="product" name="m">
+                                        <input type="hidden" value="index" name="a">
+                                        <div class="select2-container select2me" id="s2id_autogen1">
+                                            <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                                                <span class="select2-chosen">Choose a city</span>
+                                                <abbr class="select2-search-choice-close"></abbr>
+                                                <span class="select2-arrow">
+                                                    <b>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </b>
+                                                </span>
+                                            </a>
+                                            <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen2">
+                                        </div>
+                                        <input type="submit" value="search" class="btn btn-primary">
+                                    </form>
+
+                                    <div class="select2-drop select2-display-none select2-with-searchbox select2-drop-active select2-drop-above" id="select2-drop" style="">
+                                        <div class="select2-search">
+                                            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">
+                                            <span class="select2-search-fa"></span>
+                                        </div>
+                                        <ul class="select2-results" tabindex="5001" style="overflow: hidden; outline: none;">
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span>Choose a city</div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Shaoxing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanchang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Guilin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Huaiyin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Changzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable select2-highlighted">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Hangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Hangzhou&amp;Anji </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Xuzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Yantai </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Guilin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Xiaogan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanning </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Zhenjiang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Shanghai </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Chongqing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Jinmen </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Ma an shan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Chongqing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> xi'an </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Zhenjiang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Changchun </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Wuhan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Ningbo </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Changchun </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Shenyang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Dalian </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> zheng zhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> tianjin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> jinan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Shanghai </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> wulumuqi </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> wenzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> hangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> wuhan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Xi'an </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guangzhou/zhuhai/shenzhen </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nan ning </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chengdu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Harbin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> jilin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> jinzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> qingdao </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Shijiazhuang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> yinchuan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shanghai </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shihezi </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> yangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nantong </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> suzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> fuzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> hefei </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> yichang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shantou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> kunming </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanchong </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> xiamen </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Beijing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> huzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> jinzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> wuzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> DALIAN </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> jingzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> WUHAN </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> fushun </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> ji nan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guiyang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> lanzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> lanzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Jinzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> haikou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> GUILIN </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> sanming </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> linan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shijiazhuang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> kunming </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> hefei </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chengdu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shenyang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> anshan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> jiaozuo </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> tianjin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> tianjin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> beijing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> neijiang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> bijie </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> zhanjiang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shanghai </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shanghai </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> yiwu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> beijing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chongqing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> harbin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chongqing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chongqing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> XI'AN </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chengdu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chengdu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> lanzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chengdu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shanghai </div>
+                                            </li>
+
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanchong </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> beijing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> yibin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chongqing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Xuzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanchang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Beijing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> wuhan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanchang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> dalian </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Daqing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanchang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> xuzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> changchun </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> shenyang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Guilin </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> nanjing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> chengdu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanchang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guangyuan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> yiwu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> dalian </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> zhuzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Beijing </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> hangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> wuhan </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> xian </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanchang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Xiamen </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Xichang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> guang‘an </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> JILIN </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Hangzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Weifang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Nanchang </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> lanzhou </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> JINGMEN </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> lishui </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> Qufu </div>
+                                            </li>
+                                            <li class="select2-results-dept-0 select2-result select2-result-selectable">
+                                                <div class="select2-result-label"><span class="select2-match"></span> dazhou </div>
+                                            </li>
+                                        </ul>
+
+                                        <!--
+                                        <div id="ascrail2001" class="nicescroll-rails" style="padding-right: 3px; width: 10px; z-index: 9999; position: absolute; cursor: default; display: block; top: 66px; right: 0; height: 200px; opacity: 0;">
+                                            <div style="position: relative; float: right; width: 5px; background-color: rgb(212, 212, 212); border: 1px solid rgb(204, 204, 204); background-clip: padding-box; border-radius: 5px; height: 32px; top: 0px;"></div>
+                                        </div>
+                                        <div id="ascrail2001-hr" class="nicescroll-rails" style="height: 7px; z-index: 9999; position: absolute; cursor: default; display: none; top: 259px; left: 1px; width: 388px; opacity: 0;">
+                                            <div style="position: relative; top: 0px; height: 5px; background-color: rgb(212, 212, 212); border: 1px solid rgb(204, 204, 204); background-clip: padding-box; border-radius: 5px; width: 398px;"></div>
+                                        </div>
+-->
+
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer id="colophon" class=" site-footer">
+                    <div class="footer">
+                        <div class="container">
+                            <div class="row">
+                                <aside id="siteorigin-panels-builder-9" class="widget widget_siteorigin-panels-builder footer_widget">
+                                    <div id="pl-w57e9cc2c86af4" class="panel-layout">
+                                        <div id="pg-w57e9cc2c86af4-0" class="panel-grid panel-no-style">
+                                            <div id="pgc-w57e9cc2c86af4-0-0" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-0-0" class="so-panel widget widget_black-studio-tinymce widget_black_studio_tinymce panel-first-child" data-index="0">
+                                                    <div class="textwidget">
+                                                        <div class="thim-footer-location">
+                                                            <p>
+                                                                <a href="default.html"><img class="alignnone size-full wp-image-10" src="picture/logo.png" alt="logo-eduma-the-best-lms-wordpress-theme" width="145" height="40" /></a>
+                                                            </p>
+                                                            <p class="info"><i class="fa fa-phone"></i><a href="tel:0086 025 58745604"> + 0086 025 58745604</a></p>
+                                                            <p class="info"><i class="fa fa-envelope"></i><a href="mailto:info@scholarshipchina.com">info@scholarshipchina.com </a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="panel-w57e9cc2c86af4-0-0-1" class="so-panel widget widget_social panel-last-child" data-index="1">
+                                                    <div class="thim-widget-social thim-widget-social-base">
+                                                        <div class="thim-social">
+                                                            <ul class="social_link" style="margin-top: 20px">
+                                                                <li><a class="facebook hasTooltip" href="#" target="_self"><i class="fa fa-facebook"></i></a></li>
+                                                                <li><a class="twitter hasTooltip" href="#" target="_self"><i class="fa fa-twitter"></i></a></li>
+                                                                <li><a class="google-plus hasTooltip" href="" target="_self"><i class="fa fa-weixin"></i></a></li>
+                                                                <li><a class="pinterest hasTooltip" href="#" target="_self"><i class="fa fa-envelope"></i></a></li>
+                                                                <li><a class="pinterest hasTooltip" href="#" target="_self"><i class="fa fa-phone"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-1" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-1-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="2">
+                                                    <h3 class="widget-title">ScholarshipChina</h3>
+                                                    <div class="menu-company-container">
+                                                        <ul id="menu-company" class="menu">
+                                                            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2901 current_page_item menu-item-3421 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="about-us.html" class="tc-menu-inner">About Us</a></li>
+                                                            <li id="menu-item-3424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3424 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="successful-cases.html" class="tc-menu-inner">Successful Cases</a></li>
+                                                            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3422 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="contact.html" class="tc-menu-inner">Maps</a></li>
+                                                            <li id="menu-item-3423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3423 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="forum.html" class="tc-menu-inner">Forum</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-2" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-2-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="3">
+                                                    <h3 class="widget-title">Courses</h3>
+                                                    <div class="menu-links-container">
+                                                        <ul id="menu-links" class="menu">
+                                                            <li id="menu-item-5749" class="menu-item menu-item-type-post_type_archive menu-item-object-lp_course menu-item-5749 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="language.html" class="tc-menu-inner">Language</a></li>
+                                                            <li id="menu-item-3426" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3426 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="undergraduate.html" class="tc-menu-inner">Undergraduate</a></li>
+                                                            <li id="menu-item-4591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4591 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="postgraducate.html" class="tc-menu-inner">Postgraducate</a></li>
+                                                            <li id="menu-item-3427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3427 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="doctor.html" class="tc-menu-inner">Doctor</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-3" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-3-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="4">
+                                                    <h3 class="widget-title">Service</h3>
+                                                    <div class="menu-support-container">
+                                                        <ul id="menu-support" class="menu">
+                                                            <li id="menu-item-1757" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1757 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="Pick-up-service.html" class="tc-menu-inner">Pick Up</a></li>
+                                                            <li id="menu-item-1758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1758 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="tracking-code.html" class="tc-menu-inner">Tracking Code</a></li>
+                                                            <li id="menu-item-1759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1759 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="guidence.html" class="tc-menu-inner">Guidance</a></li>
+                                                            <li id="menu-item-1760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1760 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="study-tours.html" class="tc-menu-inner">Study Tour</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pgc-w57e9cc2c86af4-0-4" class="panel-grid-cell">
+                                                <div id="panel-w57e9cc2c86af4-0-4-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="5">
+                                                    <h3 class="widget-title">Helpful Links</h3>
+                                                    <div class="menu-recommend-container">
+                                                        <ul id="menu-recommend" class="menu">
+                                                            <li id="menu-item-6718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6718 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="scholarship-types.html" class="tc-menu-inner">Scholarship Types</a></li>
+                                                            <li id="menu-item-6719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6719 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="application-strategies.html" class="tc-menu-inner">Application Strategies</a></li>
+                                                            <li id="menu-item-3429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3429 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="terms-conditions.html" class="tc-menu-inner">Terms & Conditions</a></li>
+                                                            <li id="menu-item-5930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5930 tc-menu-item tc-menu-depth-0 tc-menu-layout-default"><a href="payment-method.html" class="tc-menu-inner">Payment Method</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-area">
+                        <div class="container">
+                            <div class="copyright-content">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="text-copyright">Floor 9, Block 5, Xingzhihui Business Garden, No.19, Xinghuo Road, High-Tech Zone, Nanjing, P.R.China</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="cover">
+            <div class="cover-center">
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/1-150x100.jpg" alt="Backend" title="1" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>Backend</a></h3>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/2-150x100.jpg" alt="CSS" title="2" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>CSS</a></h3>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/3-150x100.jpg" alt="Frontend" title="3" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>Frontend</a></h3>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/4-150x100.jpg" alt="General" title="4" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>General</a></h3>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/5-150x100.jpg" alt="IT &#38; Software" title="5" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>IT &#38; Software</a></h3>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/6-150x100.jpg" alt="Photography" title="6" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>Photography</a></h3>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/7-150x100.jpg" alt="Programming Language" title="7" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>Programming Language</a></h3>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a><img src="picture/8-150x100.jpg" alt="Technology" title="8" width="600" height="400"></a>
+                    </div>
+                    <h3 class="title"><a>Technology</a></h3>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="back-to-top"> <i class="fa fa-chevron-up"></i> </a>
+    </div>
+    <script data-cfasync="false" type="text/javascript">
+        window.onload = function() {
+            setTimeout(function() {
+                var body = document.getElementById("thim-body"),
+                    thim_preload = document.getElementById("preload"),
+                    len = body.childNodes.length,
+                    class_name = body.className.replace(/(?:^|\s)thim-body-preload(?!\S)/, '').replace(/(?:^|\s)thim-body-load-overlay(?!\S)/, '');
+
+                body.className = class_name;
+                if (typeof thim_preload !== 'undefined' && thim_preload !== null) {
+                    for (var i = 0; i < len; i++) {
+                        if (body.childNodes[i].id !== 'undefined' && body.childNodes[i].id == "preload") {
+                            body.removeChild(body.childNodes[i]);
+                            break;
+                        }
+                    }
+                }
+            }, 500);
+        };
+
+    </script>
+    <style type="text/css" media="all" id="siteorigin-panels-layouts-footer">
+        /* Layout tc-megamenu-5974 */
+        
+        #pgc-tc-megamenu-5974-0-0,
+        #pgc-tc-megamenu-5974-0-1 {
+            width: 31%;
+            width: calc(31% - ( 0.69 * 30px))
+        }
+        
+        #pgc-tc-megamenu-5974-0-2 {
+            width: 38%;
+            width: calc(38% - ( 0.62 * 30px))
+        }
+        
+        #pl-tc-megamenu-5974 .so-panel {
+            margin-bottom: 30px
+        }
+        
+        #pl-tc-megamenu-5974 .so-panel:last-child {
+            margin-bottom: 0px
+        }
+        
+        @media (max-width:767px) {
+            #pg-tc-megamenu-5974-0.panel-no-style,
+            #pg-tc-megamenu-5974-0.panel-has-style>.panel-row-style {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+            #pg-tc-megamenu-5974-0 .panel-grid-cell {
+                margin-right: 0
+            }
+            #pg-tc-megamenu-5974-0 .panel-grid-cell {
+                width: 100%
+            }
+            #pgc-tc-megamenu-5974-0-0,
+            #pgc-tc-megamenu-5974-0-1 {
+                margin-bottom: 30px
+            }
+            #pl-tc-megamenu-5974 .panel-grid-cell {
+                padding: 0
+            }
+            #pl-tc-megamenu-5974 .panel-grid .panel-grid-cell-empty {
+                display: none
+            }
+            #pl-tc-megamenu-5974 .panel-grid .panel-grid-cell-mobile-last {
+                margin-bottom: 0px
+            }
+        }
+        /* Layout w57e9cc2c86af4 */
+        
+        #pgc-w57e9cc2c86af4-0-0 {
+            width: 33.3%;
+            /*            width: calc(33.3% - ( 0.667 * 30px))*/
+        }
+        
+        #pgc-w57e9cc2c86af4-0-1,
+        #pgc-w57e9cc2c86af4-0-2,
+        #pgc-w57e9cc2c86af4-0-3,
+        #pgc-w57e9cc2c86af4-0-4 {
+            width: 16.675%;
+            width: calc(16.675% - ( 0.83325 * 30px))
+        }
+        
+        #pl-w57e9cc2c86af4 .so-panel {
+            margin-bottom: 30px
+        }
+        
+        #pl-w57e9cc2c86af4 .so-panel:last-child {
+            margin-bottom: 0px
+        }
+        
+        @media (max-width:767px) {
+            #pg-w57e9cc2c86af4-0.panel-no-style,
+            #pg-w57e9cc2c86af4-0.panel-has-style>.panel-row-style {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+            #pg-w57e9cc2c86af4-0 .panel-grid-cell {
+                margin-right: 0
+            }
+            #pg-w57e9cc2c86af4-0 .panel-grid-cell {
+                width: 100%
+            }
+            #pgc-w57e9cc2c86af4-0-0,
+            #pgc-w57e9cc2c86af4-0-1,
+            #pgc-w57e9cc2c86af4-0-2,
+            #pgc-w57e9cc2c86af4-0-3 {
+                margin-bottom: 30px
+            }
+            #pl-w57e9cc2c86af4 .panel-grid-cell {
+                padding: 0
+            }
+            #pl-w57e9cc2c86af4 .panel-grid .panel-grid-cell-empty {
+                display: none
+            }
+            #pl-w57e9cc2c86af4 .panel-grid .panel-grid-cell-mobile-last {
+                margin-bottom: 0px
+            }
+        }
+        
+        .pointer {
+            cursor: pointer;
+        }
+        
+        .cover {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAMFBMVEVMaXH////////////////////////////////////////////////////////////6w4mEAAAAD3RSTlMAlAX+BKLcA5+b6hJ7foD4ZP1OAAAAkUlEQVR4XkWPoQ3CUBQAL4SktoKAbCUjgAKLJZ2ABYosngTJCHSD6joUI6BZgqSoB/+Shqde7sS9x3OGk81fdO+texMtRVTia+TsQtHEUJLdohJfgNNPJHyEJPZTsWLoxShqsWITazEwqePAn69Sw2TUxk1+euPis3EwaXy8RMHSZBIlRcKKnC5hRctjMf57/wJbBlAIs9k1BAAAAABJRU5ErkJggg==), progress;
+        }
+        
+        .cover .cover-center {
+            width: 600px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -300px;
+            margin-top: -200px;
+        }
+        
+        .cover .cover-center .item {
+            display: none;
+            width: 600px;
+            height: 400px;
+            position: relative;
+        }
+        
+        .cover .cover-center .item .image {
+            width: 600px;
+            height: 400px;
+        }
+        
+        .cover .cover-center .item .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 400px;
+            font-size: 40px;
+            text-align: center;
+            margin: 0;
+            width: 600px;
+            z-index: 3;
+            text-transform: uppercase;
+        }
+        
+        .cover .cover-center .item .title a {
+            color: #fff;
+        }
+        
+        .cover .cover-center .item .image a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .4);
+            z-index: 2;
+        }
+
+    </style>
+    <script type='text/javascript'>
+        var jalerts_text = {
+            "okButton": "Ok",
+            "cancelButton": "Cancel"
+        };
+
+    </script>
+    <script type="text/javascript">
+        var woof_is_permalink = 1;
+
+        var woof_shop_page = "";
+
+        var woof_really_curr_tax = {};
+        var woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
+
+    </script>
+
+    <script type="text/javascript">
+        if (typeof ajaxurl === 'undefined') {
+
+            var ajaxurl = "https://educationwp.thimpress.com/demo-university-2/wp-admin/admin-ajax.php";
+
+        }
+
+    </script>
+
+    <style type="text/css">
+        .woof_edit_view {
+            display: none;
+        }
+
+    </style>
+    <script>
+        var $ = jQuery;
+
+        function stopPropagation(e) {
+            if (e.stopPropagation)
+                e.stopPropagation();
+            else
+                e.cancelBubble = true;
+        }
+        $(function() {
+
+            //            $("body #wrapper-container").css({"overflow": "initial"});
+            $(".fa-search").on("click", function() {
+                $(".mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready").fadeIn();
+                $(".mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready").siblings(".mfp-bg.my-mfp-zoom-in.mfp-ready").fadeIn();
+                //                $("body #wrapper-container").css({"overflow": "hidden"});
+                $("body").addClass("thim-popup-active");
+
+            })
+            $("body .mfp-container,.mfp-inline-holder .mfp-close").bind('click', function() {
+                $(".mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready").fadeOut();
+                $(".mfp-bg.my-mfp-zoom-in.mfp-ready").fadeOut();
+                //                $("body #wrapper-container").css({"overflow": "initial"});
+                $(".product_thumb .quick-view a").show();
+                $(".quick-view a.loading.dark").hide();
+                $("body").removeClass("thim-popup-active");
+            });
+            $(".mfp-content").on("click", function(e) {
+                stopPropagation(e);
+            })
+        })
+
+    </script>
+    <script type="text/javascript" defer src="js/autoptimize_1a23db216134a932f7c7743f1e3255a6.js"></script>
+    <script src="js/mapper.js"></script>
+    <script>
+        var $ = jQuery;
+        $(function() {
+
+            $(".pointer").on("click", function() {
+                var i = $(this).parents(".owl-item").index();
+                $(".cover").fadeIn();
+                $(".cover").find(".item").eq(i).fadeIn();
+            })
+            $(".cover").on("click", function() {
+                $(".cover").fadeOut();
+                $(".cover").find(".item").fadeOut();
+            })
+            //收藏
+            $(".cart .fa").on("click", function() {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active").siblings(".fa").addClass("active");
+                }
+            })
+
+            //CITY
+            $("#s2id_autogen1").on("click", function() {
+                if ($(this).parent("form").siblings("#select2-drop").hasClass("show")) {
+                    $(this).parent("form").siblings("#select2-drop").hide();
+                    $(this).parent("form").siblings("#select2-drop").removeClass("show");
+                } else {
+                    $(this).parent("form").siblings("#select2-drop").show();
+                    $(this).parent("form").siblings("#select2-drop").addClass("show");
+                }
+            })
+            $(".select2-result-selectable").on("click", function() {
+                $(".select2-chosen").text($(this).text());
+                $(this).addClass("select2-highlighted").siblings(".select2-result-selectable").removeClass("select2-highlighted");
+                $("#select2-drop").hide();
+                $("#select2-drop").removeClass("show");
+            })
+
+
+            //地图
+
+            $(".posmap").click(function(e) {
+                e.preventDefault();
+                var id = $(this).attr("rel");
+                $("#" + id).mouseout().mouseover();
+                $(this).parent().css("background", "rgb(250,57,74)").siblings().css("background", "rgb(179,179,179)");
+                //                $(this).parent().siblings().mouseover(function () {
+                //                    $(this).css("border", "rgb(48,71,112) solid 2px");
+                //                }).mouseout(function () {
+                //                    $(this).css("border", "rgb(250,57,74) solid 2px");
+                //                });
+
+                $("div[list=" + id + "]").show().siblings().hide();
+                $(".list_region").show();
+
+                var proList = $(this).attr("proList");
+
+                //                getunilist(proList, id);
+
+
+            });
+
+            $(".noborder").click(function() {
+                $(this).mouseout().mouseover();
+                var id = $(this).attr("id");
+                $("a[rel=" + id + "]").parent().css("background", "rgb(250,57,74)").siblings().css("background", "rgb(179,179,179)");
+
+                $("div[list=" + id + "]").show().siblings().hide();
+                $(".list_region").show();
+
+                var proList = $(this).attr("proList");
+
+                //                getunilist(proList, id);
+
+            });
+            //            function getunilist(proList, id) {
+            //
+            //            $.ajax({
+            //                type: "POST",
+            //                url: "universities",
+            //                data: { "proList": proList },
+            //                dataType: "json",
+            //                success: function (data) {
+            //                    $("div[list=" + id + "] ul").empty();
+            //                    $("div[list=" + id + "] ul").append(data.html);
+            //                }
+            //            });
+            //        }
+
+        })
+
+    </script>
+
+    <script type="text/javascript">
+        function intval(v) {
+            v = parseInt(v);
+            return isNaN(v) ? 0 : v;
+        }
+
+        function getPos(e) {
+            var l = 0;
+            var t = 0;
+            var w = intval(e.style.width);
+            var h = intval(e.style.height);
+            var wb = e.offsetWidth;
+            var hb = e.offsetHeight;
+            while (e.offsetParent) {
+                l += e.offsetLeft + (e.currentStyle ? intval(e.currentStyle.borderLeftWidth) : 0);
+                t += e.offsetTop + (e.currentStyle ? intval(e.currentStyle.borderTopWidth) : 0);
+                e = e.offsetParent;
+            }
+            l += e.offsetLeft + (e.currentStyle ? intval(e.currentStyle.borderLeftWidth) : 0);
+            t += e.offsetTop + (e.currentStyle ? intval(e.currentStyle.borderTopWidth) : 0);
+            return {
+                x: l,
+                y: t,
+                w: w,
+                h: h,
+                wb: wb,
+                hb: hb
+            };
+        }
+
+        function getScroll() {
+            var t, l, w, h;
+            if (document.documentElement && document.documentElement.scrollTop) {
+                t = document.documentElement.scrollTop;
+                l = document.documentElement.scrollLeft;
+                w = document.documentElement.scrollWidth;
+                h = document.documentElement.scrollHeight;
+            } else if (document.body) {
+                t = document.body.scrollTop;
+                l = document.body.scrollLeft;
+                w = document.body.scrollWidth;
+                h = document.body.scrollHeight;
+            }
+            return {
+                t: t,
+                l: l,
+                w: w,
+                h: h
+            };
+        }
+
+        function scroller(el, duration) {
+            if (typeof el != 'object') {
+                el = document.getElementById(el);
+            }
+            if (!el) return;
+            var z = this;
+            z.el = el;
+            z.p = getPos(el);
+            z.s = getScroll();
+            z.clear = function() {
+                window.clearInterval(z.timer);
+                z.timer = null
+            };
+            z.t = (new Date).getTime();
+            z.step = function() {
+                var t = (new Date).getTime();
+                var p = (t - z.t) / duration;
+                if (t >= duration + z.t) {
+                    z.clear();
+                    window.setTimeout(function() {
+                        z.scroll(z.p.y, z.p.x)
+                    }, 13);
+                } else {
+                    st = ((-Math.cos(p * Math.PI) / 2) + 0.5) * (z.p.y - z.s.t) + z.s.t;
+                    sl = ((-Math.cos(p * Math.PI) / 2) + 0.5) * (z.p.x - z.s.l) + z.s.l;
+                    z.scroll(st, sl);
+                }
+            };
+            z.scroll = function(t, l) {
+                window.scrollTo(l, t - 120)
+            };
+            z.timer = window.setInterval(function() {
+                z.step();
+            }, 13);
+        }
+
+    </script>
+</body>
+
+</html>
